@@ -3762,6 +3762,7 @@ body.is-preload .wrapper.fade > .inner {
   width: 100%;
 }
 
+
 body.is-ie #sidebar > .inner {
   height: 100%;
 }
@@ -3784,6 +3785,7 @@ body.is-ie #sidebar > .inner {
   opacity: 1;
   padding: 0;
   position: relative;
+  display: block;
 }
 
 #sidebar nav > ul > li:first-child {
