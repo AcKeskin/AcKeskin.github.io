@@ -11,7 +11,7 @@
 	<!-- Open Graph -->
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Ali Can Keskin — Software Engineer" />
-	<meta property="og:description" content="Software Engineer — XR, games, computer vision, and systems architecture." />
+	<meta property="og:description" content="Software Engineer — XR, games, computer vision, systems architecture, and AI." />
 	<meta property="og:url" content="https://ackeskin.github.io" />
 	<meta property="og:image" content="https://ackeskin.github.io/images/procedural_planets.png" />
 	<meta name="twitter:card" content="summary_large_image" />
@@ -77,10 +77,10 @@
 				<p class="hero__greeting reveal" data-delay="0">// software engineer</p>
 				<h1 class="hero__name reveal" data-delay="1">Ali Can<br/>Keskin<span class="hero__cursor">_</span></h1>
 				<p class="hero__title reveal" data-delay="2">XR &amp; Systems Engineer</p>
-				<p class="hero__subtitle reveal" data-delay="3">XR &bull; Games &bull; Computer Vision &bull; Systems Architecture</p>
+				<p class="hero__subtitle reveal" data-delay="3">XR &bull; Games &bull; Computer Vision &bull; Systems Architecture &bull; AI</p>
 				<div class="hero__cta reveal" data-delay="4">
 					<a href="#projects" class="btn btn--primary">View Projects</a>
-					<a href="https://github.com/AcKeskin/AcKeskin.github.io/raw/main/docs/CV.pdf" download class="btn btn--outline" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> Resume</a>
+					<a href="https://github.com/AcKeskin/AcKeskin.github.io/raw/main/docs/Ali_Can_Keskin_Resume.pdf" download class="btn btn--outline" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> Resume</a>
 				</div>
 			</div>
 			<div class="hero__scroll-indicator reveal" data-delay="5">
@@ -104,15 +104,15 @@
 					</div>
 				</div>
 				<div class="about__text-col">
-					<p class="about__bio reveal-slide">I'm a software engineer drawn to XR, games, and anything where visuals meet systems — real-time mesh manipulation, computer vision, procedural rendering. I care about how things are built as much as what gets built: clean architecture, clear ownership, and code that holds up.</p>
-					<p class="about__bio reveal-slide">Day-to-day I ship cross-platform XR clients and work on a C++ streaming library at Hololight. Outside of work I gravitate toward game development, software architecture, and the occasional deep dive into computer vision.</p>
+					<p class="about__bio reveal-slide">Software engineer with 4+ years shipping cross-platform XR clients and real-time streaming systems. Most of my work lives in C++ and Unity &mdash; WebRTC streaming, OpenXR, native client architecture &mdash; across HoloLens 2, Meta Quest, PICO, HTC Vive Focus 3, Magic Leap 2, Windows, Web, and Android.</p>
+					<p class="about__bio reveal-slide">Outside of work I gravitate toward game development, computer vision, software architecture, and keeping up with the latest in AI. I care about how things are built as much as what gets built: clean architecture, clear ownership, and code that holds up.</p>
 					<div class="about__stats reveal-slide">
 						<div class="about__stat">
 							<span class="about__stat-number">4+</span>
 							<span class="about__stat-label">Years Experience</span>
 						</div>
 						<div class="about__stat">
-							<span class="about__stat-number">6+</span>
+							<span class="about__stat-number">8+</span>
 							<span class="about__stat-label">Platforms Shipped</span>
 						</div>
 						<div class="about__stat">
@@ -137,11 +137,15 @@
 						<span class="tag tag--proficient">Git</span>
 						<span class="tag tag--proficient">Java</span>
 						<span class="tag tag--proficient">WebSockets</span>
+						<span class="tag tag--proficient">JNI</span>
 						<span class="tag tag--proficient">Android</span>
 						<span class="tag tag--proficient">SQL</span>
 						<span class="tag tag--proficient">CI/CD</span>
+						<span class="tag tag--proficient">MRTK3</span>
+						<span class="tag tag--proficient">XR Interaction Toolkit</span>
 						<span class="tag tag--familiar">Python</span>
 						<span class="tag tag--familiar">Unreal Engine</span>
+						<span class="tag tag--familiar">ImGui</span>
 						<span class="tag tag--familiar">OpenCV</span>
 						<span class="tag tag--familiar">Firebase</span>
 					</div>
@@ -203,10 +207,12 @@
 						<h3 class="exp-card__title">Software Engineer</h3>
 						<h4 class="exp-card__company">Hololight &mdash; Munich, DE</h4>
 						<ul class="exp-card__list">
-							<li>Architect and ship AR/VR client applications across HoloLens, Quest, Android, Windows, and Web — integrating a native C++ streaming library, Hub API layer, and client-side SQL persistence</li>
-							<li>Built the Windows desktop client and full Web client (JavaScript/WebRTC) from the ground up</li>
-							<li>Extend the core C++ streaming library with new features and deliver them across all supported platforms via CMake-based cross-compilation</li>
-							<li>Maintain cross-platform UI in Unity and consolidated fragmented Android codebases into a single CI-driven pipeline</li>
+							<li>Led development of a unified Unity/C# front-end architecture powering enterprise XR streaming clients across 8+ devices (Meta Quest, PICO, HTC Vive Focus 3, HoloLens 2, Magic Leap 2, Desktop, Web)</li>
+							<li>Designed modular connection management, codec configuration (H.264/H.265), passthrough systems, and cross-device UX &mdash; serving as the primary interface layer for all streaming clients</li>
+							<li>Lead developer on the Hub Client, a cross-device XR app launcher &mdash; app catalog, SSE handling, database management, and multi-vendor release pipelines</li>
+							<li>Developed native Android C++/JNI integrations for standalone XR headsets, contributing to runtime performance and device-specific optimizations</li>
+							<li>Built the Web client from scratch with JavaScript and WebSockets &mdash; XR streaming in the browser, no install required</li>
+							<li>Unified Android build variants into CI pipelines and built internal Python tooling for PR automation and git-based validation</li>
 						</ul>
 						<div class="exp-card__tags">
 							<span class="tag tag--sm">C++</span>
@@ -215,7 +221,9 @@
 							<span class="tag tag--sm">WebRTC</span>
 							<span class="tag tag--sm">OpenXR</span>
 							<span class="tag tag--sm">Unity</span>
-							<span class="tag tag--sm">CMake</span>
+							<span class="tag tag--sm">JNI</span>
+							<span class="tag tag--sm">Python</span>
+							<span class="tag tag--sm">CI/CD</span>
 						</div>
 					</div>
 				</article>
@@ -226,9 +234,9 @@
 					</div>
 					<div class="exp-card__body">
 						<div class="exp-card__dot"></div>
-						<h3 class="exp-card__title">XR Developer</h3>
+						<h3 class="exp-card__title">Unity Developer</h3>
 						<h4 class="exp-card__company">Simovate &mdash; Ankara, TR</h4>
-						<p class="exp-card__desc">Built a realistic CNC Milling Machine Simulator in C++, showcased at Oracle's Industry Innovation Lab. Created a custom real-time mesh manipulation library for dynamic VR simulations and developed modular AR/VR training applications for manufacturing clients.</p>
+						<p class="exp-card__desc">Built AR/VR applications for industrial training and remote support in Unity (C#), with performance-critical parts in C++. Built a realistic CNC Milling Machine Simulator showcased at Oracle's Industry Innovation Lab. Wrote a custom real-time mesh manipulation library for VR cutting and deformation simulations. Built an Android Remote Maintenance Application with live annotations and data streaming.</p>
 						<div class="exp-card__tags">
 							<span class="tag tag--sm">Unity</span>
 							<span class="tag tag--sm">C#</span>
