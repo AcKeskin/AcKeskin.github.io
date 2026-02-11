@@ -429,7 +429,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 	height: 420px;
 	opacity: 0.16;
 	pointer-events: none;
-	z-index: 0;
+	z-index: 10;
 	mix-blend-mode: screen;
 	transition: opacity 0.8s var(--ease-out);
 }
@@ -639,7 +639,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 	background: var(--bg-card);
 	position: relative;
 	z-index: 2;
-	filter: grayscale(0.25) contrast(1.05) brightness(0.95);
+	filter: grayscale(0.6) contrast(1.1) brightness(0.9);
 	transition: filter 0.5s var(--ease-out);
 }
 
@@ -696,15 +696,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 	letter-spacing: 1px;
 }
 
-.about__stat--muted .about__stat-number {
-	color: var(--text-muted);
-	font-size: var(--text-lg);
-}
-
-.about__stat--muted .about__stat-label {
-	font-size: 10px;
-}
-
 .about__tech {
 	display: flex;
 	flex-wrap: wrap;
@@ -737,153 +728,24 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 	font-size: 11px;
 }
 
-/* Proficiency tiers — icon badge prefix */
-.tag--core,
-.tag--proficient,
-.tag--familiar {
-	display: inline-flex;
-	align-items: center;
-	gap: 6px;
-	color: var(--accent);
-	background: var(--accent-glow);
-	border-color: rgba(34, 211, 238, 0.15);
-}
-
-.tag--core::before,
-.tag--proficient::before,
-.tag--familiar::before {
-	content: '';
-	display: inline-block;
-	width: 6px;
-	height: 6px;
-	border-radius: 50%;
-	flex-shrink: 0;
-}
-
-/* Core: filled circle */
+/* Proficiency tiers */
 .tag--core {
+	color: var(--accent);
 	background: var(--accent-glow-strong);
 	border-color: var(--accent-dim);
 	font-weight: 500;
 }
 
-.tag--core::before {
-	background: var(--accent);
-}
-
-/* Proficient: half-filled circle */
-.tag--proficient::before {
-	background: linear-gradient(90deg, var(--accent) 50%, transparent 50%);
-	border: 1px solid var(--accent);
-	box-sizing: border-box;
-}
-
-/* Familiar: outline circle */
-.tag--familiar::before {
-	border: 1px solid var(--accent);
-	background: transparent;
-	box-sizing: border-box;
-}
-
-/* Tag legend */
-.about__tech-legend {
-	display: flex;
-	gap: var(--space-lg);
-	margin-top: var(--space-md);
-}
-
-.legend__item {
-	display: inline-flex;
-	align-items: center;
-	gap: 6px;
-	font-family: var(--font-mono);
-	font-size: 11px;
-	color: var(--text-muted);
-	letter-spacing: 0.5px;
-}
-
-.legend__dot {
-	display: inline-block;
-	width: 6px;
-	height: 6px;
-	border-radius: 50%;
-}
-
-.legend__dot--core {
-	background: var(--accent);
-}
-
-.legend__dot--proficient {
-	background: linear-gradient(90deg, var(--accent) 50%, transparent 50%);
-	border: 1px solid var(--accent);
-	box-sizing: border-box;
-}
-
-.legend__dot--familiar {
-	border: 1px solid var(--accent);
-	background: transparent;
-	box-sizing: border-box;
-}
-
-/* --- Beyond Code --- */
-.beyond {
-	background: var(--bg-primary);
-}
-
-.beyond__grid {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: var(--space-lg);
-	max-width: var(--content-max);
-}
-
-.beyond__card {
-	padding: var(--space-xl);
-	background: var(--bg-card);
-	border: 1px solid var(--border);
-	border-radius: var(--radius-lg);
-	transition: border-color 0.4s var(--ease-out), transform 0.4s var(--ease-out);
-}
-
-.beyond__card:hover {
-	border-color: var(--border-hover);
-	transform: translateY(-4px);
-}
-
-.beyond__icon {
-	font-size: var(--text-xl);
+.tag--proficient {
 	color: var(--accent);
-	margin-bottom: var(--space-md);
-	display: block;
+	background: var(--accent-glow);
+	border-color: rgba(34, 211, 238, 0.15);
 }
 
-.beyond__label {
-	font-family: var(--font-display);
-	font-size: var(--text-base);
-	font-weight: 600;
-	margin-bottom: var(--space-sm);
-}
-
-.beyond__desc {
-	font-size: var(--text-sm);
+.tag--familiar {
 	color: var(--text-secondary);
-	line-height: 1.6;
-}
-
-@media (max-width: 1100px) {
-	.beyond__grid {
-		grid-template-columns: repeat(2, 1fr);
-	}
-}
-
-@media (max-width: 580px) {
-	.beyond__grid {
-		grid-template-columns: 1fr;
-	}
-
-	.beyond__card {
-		padding: 20px;
-	}
+	background: rgba(160, 174, 192, 0.08);
+	border-color: rgba(160, 174, 192, 0.12);
 }
 
 /* --- Experience Timeline --- */
@@ -982,29 +844,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 	color: var(--text-secondary);
 	line-height: 1.7;
 	margin-bottom: var(--space-md);
-}
-
-.exp-card__list {
-	list-style: none;
-	padding: 0;
-	margin: 0 0 var(--space-md) 0;
-}
-
-.exp-card__list li {
-	position: relative;
-	padding-left: 16px;
-	font-size: var(--text-sm);
-	color: var(--text-secondary);
-	line-height: 1.7;
-	margin-bottom: 6px;
-}
-
-.exp-card__list li::before {
-	content: '▹';
-	position: absolute;
-	left: 0;
-	color: var(--accent);
-	font-size: 12px;
 }
 
 .exp-card__tags {

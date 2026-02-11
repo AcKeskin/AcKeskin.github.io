@@ -5,17 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 	<title>Ali Can Keskin — Software Engineer</title>
 	<meta name="description" content="Portfolio of Ali Can Keskin — Software Engineer specializing in XR development, C++ systems, and cross-platform architectures." />
-	<!-- Favicon -->
-	<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230f1318'/><text x='16' y='22' font-family='monospace' font-size='14' font-weight='bold' fill='%2322d3ee' text-anchor='middle'>{A}</text></svg>" type="image/svg+xml" />
-
-	<!-- Open Graph -->
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Ali Can Keskin — Software Engineer" />
-	<meta property="og:description" content="Software Engineer — XR, games, computer vision, and systems architecture." />
-	<meta property="og:url" content="https://ackeskin.github.io" />
-	<meta property="og:image" content="https://ackeskin.github.io/images/procedural_planets.png" />
-	<meta name="twitter:card" content="summary_large_image" />
-
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -77,10 +66,10 @@
 				<p class="hero__greeting reveal" data-delay="0">// software engineer</p>
 				<h1 class="hero__name reveal" data-delay="1">Ali Can<br/>Keskin<span class="hero__cursor">_</span></h1>
 				<p class="hero__title reveal" data-delay="2">XR &amp; Systems Engineer</p>
-				<p class="hero__subtitle reveal" data-delay="3">XR &bull; Games &bull; Computer Vision &bull; Systems Architecture</p>
+				<p class="hero__subtitle reveal" data-delay="3">XR Development &bull; C++ Systems &bull; Real-Time Streaming</p>
 				<div class="hero__cta reveal" data-delay="4">
 					<a href="#projects" class="btn btn--primary">View Projects</a>
-					<a href="https://github.com/AcKeskin/AcKeskin.github.io/raw/main/docs/CV.pdf" download class="btn btn--outline" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> Resume</a>
+					<a href="https://github.com/AcKeskin/AcKeskin.github.io/blob/main/docs/CV.pdf" class="btn btn--outline" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> Resume</a>
 				</div>
 			</div>
 			<div class="hero__scroll-indicator reveal" data-delay="5">
@@ -104,11 +93,11 @@
 					</div>
 				</div>
 				<div class="about__text-col">
-					<p class="about__bio reveal-slide">I'm a software engineer drawn to XR, games, and anything where visuals meet systems — real-time mesh manipulation, computer vision, procedural rendering. I care about how things are built as much as what gets built: clean architecture, clear ownership, and code that holds up.</p>
-					<p class="about__bio reveal-slide">Day-to-day I ship cross-platform XR clients and work on a C++ streaming library at Hololight. Outside of work I gravitate toward game development, software architecture, and the occasional deep dive into computer vision.</p>
+					<p class="about__bio reveal-slide">I'm a software engineer focused on XR and real-time systems. Over the last few years, I've gone from building Unity-based AR/VR apps to designing C++ streaming libraries, working across WebRTC, OpenXR, and cross-platform architectures.</p>
+					<p class="about__bio reveal-slide">What drives me is the moment something just works — a streaming session connecting seamlessly, an XR app feeling natural in someone's hands, or a system holding up under real-world conditions.</p>
 					<div class="about__stats reveal-slide">
 						<div class="about__stat">
-							<span class="about__stat-number">4+</span>
+							<span class="about__stat-number">3+</span>
 							<span class="about__stat-label">Years Experience</span>
 						</div>
 						<div class="about__stat">
@@ -116,71 +105,34 @@
 							<span class="about__stat-label">Platforms Shipped</span>
 						</div>
 						<div class="about__stat">
-							<span class="about__stat-number">3</span>
-							<span class="about__stat-label">Published Games</span>
-						</div>
-						<div class="about__stat about__stat--muted">
-							<span class="about__stat-number">???</span>
-							<span class="about__stat-label">Unfinished Side Projects</span>
+							<span class="about__stat-number">3.48</span>
+							<span class="about__stat-label">GPA</span>
 						</div>
 					</div>
 					<div class="about__tech reveal-slide">
 						<span class="tag tag--core">C++</span>
 						<span class="tag tag--core">C#</span>
 						<span class="tag tag--core">Unity</span>
-						<span class="tag tag--core">OpenXR</span>
 						<span class="tag tag--core">WebRTC</span>
-						<span class="tag tag--core">XR</span>
-						<span class="tag tag--proficient">OpenGL</span>
+						<span class="tag tag--core">OpenXR</span>
+						<span class="tag tag--core">AR/VR/MR</span>
+						<span class="tag tag--core">Cross-Platform</span>
 						<span class="tag tag--proficient">JavaScript</span>
 						<span class="tag tag--proficient">CMake</span>
 						<span class="tag tag--proficient">Git</span>
-						<span class="tag tag--proficient">Java</span>
 						<span class="tag tag--proficient">WebSockets</span>
 						<span class="tag tag--proficient">Android</span>
 						<span class="tag tag--proficient">SQL</span>
+						<span class="tag tag--proficient">UWP</span>
 						<span class="tag tag--proficient">CI/CD</span>
+						<span class="tag tag--proficient">Performance Optimization</span>
 						<span class="tag tag--familiar">Python</span>
 						<span class="tag tag--familiar">Unreal Engine</span>
 						<span class="tag tag--familiar">OpenCV</span>
 						<span class="tag tag--familiar">Firebase</span>
+						<span class="tag tag--familiar">Spring Boot</span>
+						<span class="tag tag--familiar">Computer Vision</span>
 					</div>
-					<div class="about__tech-legend reveal-slide">
-						<span class="legend__item"><span class="legend__dot legend__dot--core"></span>Core</span>
-						<span class="legend__item"><span class="legend__dot legend__dot--proficient"></span>Proficient</span>
-						<span class="legend__item"><span class="legend__dot legend__dot--familiar"></span>Familiar</span>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Beyond Code -->
-		<section id="beyond" class="section beyond">
-			<div class="section__header">
-				<span class="section__index">//</span>
-				<h2 class="section__title">Beyond Code</h2>
-				<div class="section__line"></div>
-			</div>
-			<div class="beyond__grid">
-				<div class="beyond__card reveal-slide">
-					<i class="fa-solid fa-gamepad beyond__icon"></i>
-					<h3 class="beyond__label">Games</h3>
-					<p class="beyond__desc">PC master race. Everything from competitive shooters to story-driven single-player. If it has good design, I'm in.</p>
-				</div>
-				<div class="beyond__card reveal-slide">
-					<i class="fa-solid fa-headphones beyond__icon"></i>
-					<h3 class="beyond__label">Music</h3>
-					<p class="beyond__desc">Rock, metal, rap, pop, film soundtracks — no filter. Piano player, though the piano has been patient with me lately.</p>
-				</div>
-				<div class="beyond__card reveal-slide">
-					<i class="fa-solid fa-futbol beyond__icon"></i>
-					<h3 class="beyond__label">Sports</h3>
-					<p class="beyond__desc">Football, basketball, table tennis, swimming, volleyball. Also chess — if that counts.</p>
-				</div>
-				<div class="beyond__card reveal-slide">
-					<i class="fa-solid fa-tv beyond__icon"></i>
-					<h3 class="beyond__label">Series</h3>
-					<p class="beyond__desc">Drawn to smart characters and darker tones — Person of Interest, Sherlock, that kind of thing.</p>
 				</div>
 			</div>
 		</section>
@@ -202,12 +154,7 @@
 						<div class="exp-card__dot"></div>
 						<h3 class="exp-card__title">Software Engineer</h3>
 						<h4 class="exp-card__company">Hololight &mdash; Munich, DE</h4>
-						<ul class="exp-card__list">
-							<li>Architect and ship AR/VR client applications across HoloLens, Quest, Android, Windows, and Web — integrating a native C++ streaming library, Hub API layer, and client-side SQL persistence</li>
-							<li>Built the Windows desktop client and full Web client (JavaScript/WebRTC) from the ground up</li>
-							<li>Extend the core C++ streaming library with new features and deliver them across all supported platforms via CMake-based cross-compilation</li>
-							<li>Maintain cross-platform UI in Unity and consolidated fragmented Android codebases into a single CI-driven pipeline</li>
-						</ul>
+						<p class="exp-card__desc">Design and implement the core AR/VR client applications, integrating a C++ streaming library, Hub communication layer, and client-side SQL database across platforms. Built the Windows desktop client and full Web client from scratch. Contribute new features to the native streaming library and ship them across all supported platforms. Maintain cross-platform UI in Unity and unify Android client codebases via CI pipeline.</p>
 						<div class="exp-card__tags">
 							<span class="tag tag--sm">C++</span>
 							<span class="tag tag--sm">C#</span>
@@ -226,14 +173,14 @@
 					</div>
 					<div class="exp-card__body">
 						<div class="exp-card__dot"></div>
-						<h3 class="exp-card__title">XR Developer</h3>
+						<h3 class="exp-card__title">Unity Developer</h3>
 						<h4 class="exp-card__company">Simovate &mdash; Ankara, TR</h4>
 						<p class="exp-card__desc">Built a realistic CNC Milling Machine Simulator in C++, showcased at Oracle's Industry Innovation Lab. Created a custom real-time mesh manipulation library for dynamic VR simulations and developed modular AR/VR training applications for manufacturing clients.</p>
 						<div class="exp-card__tags">
 							<span class="tag tag--sm">Unity</span>
 							<span class="tag tag--sm">C#</span>
 							<span class="tag tag--sm">C++</span>
-							<span class="tag tag--sm">XR</span>
+							<span class="tag tag--sm">AR/VR</span>
 						</div>
 					</div>
 				</article>
@@ -353,7 +300,7 @@
 
 				<article class="project-card project-card--featured reveal-slide">
 					<div class="project-card__media">
-						<video autoplay loop muted playsinline poster="images/procedural_planets.png">
+						<video autoplay loop muted playsinline poster="images/procedural_planets_cinematic.gif">
 							<source src="videos/procedural_planets_cinematic.mp4" type="video/mp4" />
 						</video>
 						<div class="project-card__overlay"></div>
@@ -405,7 +352,7 @@
 						<p class="project-card__desc">Remote AR/VR maintenance — professionals view the technician's field perspective, retrieve 3D models, and share real-time annotations. Built with Unity and OpenCV for marker tracking.</p>
 						<div class="project-card__tags">
 							<span class="tag tag--sm">Unity</span>
-							<span class="tag tag--sm">XR</span>
+							<span class="tag tag--sm">AR/VR</span>
 							<span class="tag tag--sm">OpenCV</span>
 						</div>
 						<a href="https://github.com/Virtuanance" class="project-card__link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Source Code</a>
@@ -443,10 +390,10 @@
 			<div class="contact__content reveal-slide">
 				<div class="contact__status">
 					<span class="contact__status-dot"></span>
-					Based in Munich, DE
+					Based in Munich — open to remote
 				</div>
-				<p class="contact__heading">Get in touch.</p>
-				<p class="contact__desc">Always happy to talk games, XR, graphics, architecture, or interesting side projects. Drop me a line.</p>
+				<p class="contact__heading">Interested in working together?</p>
+				<p class="contact__desc">I'm open to opportunities in XR, real-time systems, and C++ engineering. Feel free to reach out.</p>
 				<div class="contact__links">
 					<a href="mailto:keskinac1998@gmail.com" class="btn btn--primary"><i class="fa-solid fa-envelope"></i> Send Email</a>
 					<a href="https://www.linkedin.com/in/ali-can-keskin/" class="btn btn--outline" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
@@ -463,7 +410,7 @@
 						<span class="nav__logo-name">ACK</span>
 						<span class="nav__logo-bracket">}</span>
 					</span>
-					<p class="footer__tagline">Still tweaking.</p>
+					<p class="footer__tagline">Let's build something.</p>
 				</div>
 				<div class="footer__right">
 					<div class="footer__socials">
@@ -474,7 +421,7 @@
 				</div>
 			</div>
 			<div class="footer__bottom">
-				<p>&copy; 2026 Ali Can Keskin</p>
+				<p>&copy; Ali Can Keskin</p>
 			</div>
 		</footer>
 
