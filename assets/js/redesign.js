@@ -161,12 +161,38 @@
 	function initCursorGlow() {
 		var glow = document.getElementById('cursor-glow');
 		if (!glow || window.matchMedia('(max-width: 860px)').matches) return;
+		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
 		var mouseX = 0;
 		var mouseY = 0;
 		var currentX = 0;
 		var currentY = 0;
 		var isVisible = false;
+		var running = false;
+
+		// Compositor-friendly positioning (transform, not left/top).
+		glow.style.left = '0';
+		glow.style.top = '0';
+
+		function animate() {
+			currentX += (mouseX - currentX) * 0.08;
+			currentY += (mouseY - currentY) * 0.08;
+			glow.style.transform = 'translate(' + currentX + 'px, ' + currentY + 'px) translate(-50%, -50%)';
+
+			// Stop the loop once it has effectively caught up — restart on next move.
+			if (Math.abs(mouseX - currentX) < 0.5 && Math.abs(mouseY - currentY) < 0.5) {
+				running = false;
+				return;
+			}
+			requestAnimationFrame(animate);
+		}
+
+		function ensureRunning() {
+			if (!running) {
+				running = true;
+				requestAnimationFrame(animate);
+			}
+		}
 
 		document.addEventListener('mousemove', function (e) {
 			mouseX = e.clientX;
@@ -175,23 +201,13 @@
 				isVisible = true;
 				glow.style.opacity = '1';
 			}
-		});
+			ensureRunning();
+		}, { passive: true });
 
 		document.addEventListener('mouseleave', function () {
 			isVisible = false;
 			glow.style.opacity = '0';
 		});
-
-		function animate() {
-			// Smooth follow with lerp
-			currentX += (mouseX - currentX) * 0.08;
-			currentY += (mouseY - currentY) * 0.08;
-			glow.style.left = currentX + 'px';
-			glow.style.top = currentY + 'px';
-			requestAnimationFrame(animate);
-		}
-
-		animate();
 	}
 
 	// --- Video Playback Rates ---
@@ -222,6 +238,11 @@
 	function initWireframe() {
 		var canvas = document.getElementById('wireframe-bg');
 		if (!canvas) return;
+		// Skip the continuous canvas loop entirely for reduced-motion users.
+		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+			canvas.style.display = 'none';
+			return;
+		}
 
 		var ctx = canvas.getContext('2d');
 		var dpr = window.devicePixelRatio || 1;
@@ -588,10 +609,22 @@
 
 			angleY += 0.003;
 			angleX += 0.001;
-			requestAnimationFrame(draw);
+			rafId = requestAnimationFrame(draw);
 		}
 
-		draw();
+		// Pause the loop when the tab is hidden; resume on return.
+		var rafId = null;
+		function start() {
+			if (rafId === null) rafId = requestAnimationFrame(draw);
+		}
+		function stop() {
+			if (rafId !== null) { cancelAnimationFrame(rafId); rafId = null; }
+		}
+		document.addEventListener('visibilitychange', function () {
+			if (document.hidden) stop(); else start();
+		});
+
+		start();
 	}
 
 	// --- Card Tilt on Hover ---

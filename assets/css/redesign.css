@@ -244,6 +244,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 	pointer-events: none;
 	z-index: 1;
 	transform: translate(-50%, -50%);
+	will-change: transform;
 	opacity: 0;
 	transition: opacity 0.4s;
 }
@@ -498,10 +499,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 	transform: translateY(-50%);
 	width: 420px;
 	height: 420px;
-	opacity: 0.16;
+	opacity: 0.22;
 	pointer-events: none;
 	z-index: 0;
-	mix-blend-mode: screen;
 	transition: opacity 0.8s var(--ease-out);
 }
 
