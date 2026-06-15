@@ -27,6 +27,9 @@
 	<!-- Skip to content -->
 	<a href="#main" class="skip-link">Skip to content</a>
 
+	<!-- Aurora atmospheric backdrop -->
+	<div class="aurora-bg" aria-hidden="true"></div>
+
 	<!-- Loader -->
 	<div id="loader" aria-hidden="true">
 		<div class="loader__bar"></div>
@@ -377,6 +380,41 @@
 							<span class="tag tag--sm">Procedural Generation</span>
 						</div>
 						<a href="https://github.com/AcKeskin/procedural-planets" class="project-card__link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Source Code</a>
+					</div>
+				</article>
+
+				<article class="project-card reveal-slide">
+					<div class="project-card__media project-card__media--terminal">
+						<div class="terminal">
+							<div class="terminal__bar">
+								<span class="terminal__dot"></span>
+								<span class="terminal__dot"></span>
+								<span class="terminal__dot"></span>
+								<span class="terminal__name">contexture — /review</span>
+							</div>
+							<pre class="terminal__body"><code><span class="terminal__prompt">$</span> /review src/auth/
+
+Loaded <span class="terminal__hl">7</span> architectural rules.
+Auditing 3 files...
+
+<span class="terminal__warn">F1 · High · Layering</span> — login.ts:42
+  Direct DB call from controller layer.
+
+(<span class="terminal__hl">a</span>)pply / (s)kip / (e)dit / (w)on't-fix<span class="terminal__cursor">_</span></code></pre>
+						</div>
+						<div class="project-card__overlay"></div>
+					</div>
+					<div class="project-card__content">
+						<span class="project-card__label">Tooling / AI</span>
+						<h3 class="project-card__title">contexture</h3>
+						<p class="project-card__desc">A discipline loop for working with AI coding agents — an architectural-rule corpus, safety hooks, and a memory store wired into Claude Code. Write a rule once; it loads before relevant code and audits after. Built around a propose-confirm collaborator principle: nothing changes silently.</p>
+						<div class="project-card__tags">
+							<span class="tag tag--sm">Node.js</span>
+							<span class="tag tag--sm">Claude Code</span>
+							<span class="tag tag--sm">Agent Tooling</span>
+							<span class="tag tag--sm">Developer Workflow</span>
+						</div>
+						<a href="https://github.com/AcKeskin/contexture" class="project-card__link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Source Code</a>
 					</div>
 				</article>
 
