@@ -14,7 +14,7 @@
 
 	--text-primary: #eef2fb;
 	--text-secondary: #a6b2cc;
-	--text-muted: #8696b5; /* WCAG AA (≈4.6:1) on --bg-primary; was #6f7e9e (~3.8:1) */
+	--text-muted: #8696b5; /* WCAG AA (≈6.5:1) on --bg-primary; was #6f7e9e (≈4.7:1, already AA — raised for headroom over translucent surfaces) */
 
 	/* Dual accent — cyan primary, violet secondary (aurora) */
 	--accent: #22d3ee;
@@ -1328,9 +1328,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 .project-card__overlay {
 	position: absolute;
 	inset: 0;
-	/* Fade to a solid surface so media meets the content panel cleanly
-	   (var(--bg-card) is translucent and produced a muddy half-fade here). */
-	background: linear-gradient(180deg, transparent 45%, rgba(13, 18, 33, 0.85) 100%);
+	/* Fade media into the card surface (--bg-card base rgb 22,30,51) at high alpha,
+	   instead of fading to the translucent token itself which gave a muddy half-fade. */
+	background: linear-gradient(180deg, transparent 45%, rgba(22, 30, 51, 0.9) 100%);
 	pointer-events: none;
 }
 
