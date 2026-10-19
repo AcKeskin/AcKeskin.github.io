@@ -1334,25 +1334,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 	pointer-events: none;
 }
 
-.project-card__media--icon {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-elevated) 100%);
-}
-
-.project-card__media--icon i {
-	font-size: 48px;
-	color: var(--accent);
-	opacity: 0.6;
-	transition: all 0.4s var(--ease-out);
-}
-
-.project-card:hover .project-card__media--icon i {
-	opacity: 1;
-	transform: scale(1.1);
-}
-
 /* Faux terminal panel — for projects with no screenshot (e.g. contexture) */
 .project-card__media--terminal {
 	background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);

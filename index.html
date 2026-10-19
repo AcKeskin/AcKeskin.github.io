@@ -43,7 +43,7 @@
 	<canvas id="wireframe-bg" aria-hidden="true"></canvas>
 
 	<!-- Navigation -->
-	<nav id="nav" role="navigation">
+	<nav id="nav">
 		<div class="nav__logo">
 			<span class="nav__logo-bracket">{</span>
 			<span class="nav__logo-name">ACK</span>
@@ -65,7 +65,7 @@
 	</nav>
 
 	<!-- Mobile nav toggle -->
-	<button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+	<button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-controls="nav" aria-expanded="false">
 		<span></span><span></span><span></span>
 	</button>
 	<div id="nav-backdrop" class="nav-backdrop"></div>
@@ -83,7 +83,7 @@
 				<p class="hero__subtitle reveal" data-delay="3">XR &bull; Games &bull; Computer Vision &bull; Systems Architecture &bull; AI</p>
 				<div class="hero__cta reveal" data-delay="4">
 					<a href="#projects" class="btn btn--primary">View Projects</a>
-					<a href="https://github.com/AcKeskin/AcKeskin.github.io/raw/main/docs/Ali_Can_Keskin_Resume.pdf" download class="btn btn--outline" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> Resume</a>
+					<a href="docs/Ali_Can_Keskin_Resume.pdf" class="btn btn--outline" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> Resume</a>
 				</div>
 			</div>
 			<div class="hero__scroll-indicator reveal" data-delay="5">
@@ -313,7 +313,7 @@
 		<section id="education" class="section education">
 			<div class="section__header">
 				<span class="section__index">03</span>
-				<h2 class="section__title">Education & Certifications</h2>
+				<h2 class="section__title">Education &amp; Certifications</h2>
 				<div class="section__line"></div>
 			</div>
 			<div class="education__grid">
@@ -342,11 +342,11 @@
 				<p class="education__coursework-desc reveal-slide">Selected work from Computer Graphics (CMPE 360) — 3D modeling, lighting, shading, and rendering with Blender and WebGL.</p>
 				<div class="education__gallery">
 					<figure class="edu-gallery__item reveal-slide">
-						<img src="images/cg_trex_tardis.png" alt="Low-poly T-Rex and TARDIS scene" loading="lazy" />
+						<img src="images/cg_trex_tardis.jpg" alt="Low-poly T-Rex and TARDIS scene" loading="lazy" />
 						<figcaption>Low-poly scene: T-Rex &amp; TARDIS with custom textures and lighting</figcaption>
 					</figure>
 					<figure class="edu-gallery__item reveal-slide">
-						<img src="images/cg_reflections.png" alt="Reflection and refraction render" loading="lazy" />
+						<img src="images/cg_reflections.jpg" alt="Reflection and refraction render" loading="lazy" />
 						<figcaption>Reflection, refraction, and Blinn-Phong shading</figcaption>
 					</figure>
 				</div>
@@ -420,8 +420,8 @@ Auditing 3 files...
 
 				<article class="project-card reveal-slide">
 					<div class="project-card__media">
-						<video autoplay loop muted playsinline>
-							<source src="videos/lf.mp4" type="video/mp4" />
+						<video autoplay loop muted playsinline preload="metadata" poster="images/last_fighter_poster.jpg">
+							<source src="videos/last_fighter.mp4" type="video/mp4" />
 						</video>
 						<div class="project-card__overlay"></div>
 					</div>
@@ -440,8 +440,8 @@ Auditing 3 files...
 
 				<article class="project-card reveal-slide">
 					<div class="project-card__media">
-						<video autoplay loop muted playsinline>
-							<source src="videos/Virtuanance.mp4#t=28,120" type="video/mp4" />
+						<video autoplay loop muted playsinline preload="metadata" poster="images/virtuanance_poster.jpg">
+							<source src="videos/virtuanance.mp4" type="video/mp4" />
 						</video>
 						<div class="project-card__overlay"></div>
 					</div>
@@ -472,7 +472,7 @@ Auditing 3 files...
 							<span class="tag tag--sm">GAN</span>
 							<span class="tag tag--sm">Computer Vision</span>
 						</div>
-						<a href="https://github.com/AcKeskin/AcKeskin.github.io/blob/main/docs/CMPE490_Final_Report.pdf" class="project-card__link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> Report</a>
+						<a href="docs/CMPE490_Final_Report.pdf" class="project-card__link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> Report</a>
 					</div>
 				</article>
 

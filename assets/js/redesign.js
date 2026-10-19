@@ -103,14 +103,7 @@
 					var target = document.getElementById(href.substring(1));
 					if (target) {
 						target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-						// Close mobile nav
-						var nav = document.getElementById('nav');
-						var toggle = document.getElementById('nav-toggle');
-						var backdrop = document.getElementById('nav-backdrop');
-						if (nav) nav.classList.remove('open');
-						if (toggle) toggle.classList.remove('active');
-						if (backdrop) backdrop.classList.remove('visible');
+						closeNav();
 					}
 				}
 			});
@@ -118,36 +111,26 @@
 	}
 
 	// --- Mobile Nav ---
+	var nav = document.getElementById('nav');
+	var toggle = document.getElementById('nav-toggle');
+	var backdrop = document.getElementById('nav-backdrop');
+
+	function setNavOpen(open) {
+		toggle.classList.toggle('active', open);
+		toggle.setAttribute('aria-expanded', open);
+		nav.classList.toggle('open', open);
+		backdrop.classList.toggle('visible', open);
+	}
+
+	function closeNav() { setNavOpen(false); }
+
 	function initMobileNav() {
-		var toggle = document.getElementById('nav-toggle');
-		var nav = document.getElementById('nav');
-		var backdrop = document.getElementById('nav-backdrop');
-		if (!toggle || !nav) return;
-
-		function openNav() {
-			toggle.classList.add('active');
-			nav.classList.add('open');
-			if (backdrop) backdrop.classList.add('visible');
-		}
-
-		function closeNav() {
-			toggle.classList.remove('active');
-			nav.classList.remove('open');
-			if (backdrop) backdrop.classList.remove('visible');
-		}
-
 		toggle.addEventListener('click', function () {
-			if (nav.classList.contains('open')) {
-				closeNav();
-			} else {
-				openNav();
-			}
+			setNavOpen(!nav.classList.contains('open'));
 		});
 
 		// Close on backdrop tap
-		if (backdrop) {
-			backdrop.addEventListener('click', closeNav);
-		}
+		backdrop.addEventListener('click', closeNav);
 
 		// Close on outside click
 		document.addEventListener('click', function (e) {
@@ -207,30 +190,6 @@
 		document.addEventListener('mouseleave', function () {
 			isVisible = false;
 			glow.style.opacity = '0';
-		});
-	}
-
-	// --- Video Playback Rates ---
-	function initVideoPlayback() {
-		var videos = document.querySelectorAll('.project-card__media video');
-		videos.forEach(function (video) {
-			var src = video.querySelector('source');
-			if (!src) return;
-
-			var srcAttr = src.getAttribute('src') || '';
-			// Set playback rates based on video file
-			if (srcAttr.indexOf('lf.mp4') !== -1) {
-				video.playbackRate = 3.0;
-			} else if (srcAttr.indexOf('Virtuanance') !== -1) {
-				video.playbackRate = 4.0;
-			} else if (srcAttr.indexOf('FPS-ER') !== -1) {
-				video.playbackRate = 2.0;
-			}
-
-			// Ensure autoplay
-			video.play().catch(function () {
-				// Autoplay blocked — muted videos should work, but swallow error
-			});
 		});
 	}
 
@@ -657,7 +616,6 @@
 		initSmoothScroll();
 		initMobileNav();
 		initCursorGlow();
-		initVideoPlayback();
 		initWireframe();
 		initCardTilt();
 	});
