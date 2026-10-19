@@ -2,553 +2,180 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-	<title>Ali Can Keskin — Software Engineer</title>
-	<meta name="description" content="Portfolio of Ali Can Keskin, a software engineer working on XR clients, C++ systems and cross-platform apps." />
-	<!-- Favicon -->
-	<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230a0e1a'/><text x='16' y='22' font-family='monospace' font-size='14' font-weight='bold' fill='%2322d3ee' text-anchor='middle'>{A}</text></svg>" type="image/svg+xml" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Ali Can Keskin · Software Engineer</title>
+	<meta name="description" content="Portfolio of Ali Can Keskin, a software engineer in Munich building real-time streaming and XR clients in C++ and C#." />
+	<meta name="theme-color" content="#17181a" />
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%2317181a'/><path d='M4 11V4h7M21 4h7v7M28 21v7h-7M11 28H4v-7' fill='none' stroke='%23f0a23b' stroke-width='3'/></svg>" type="image/svg+xml" />
 
-	<!-- Open Graph -->
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Ali Can Keskin — Software Engineer" />
-	<meta property="og:description" content="Software engineer. XR, games, computer vision, systems architecture and AI." />
+	<meta property="og:title" content="Ali Can Keskin · Software Engineer" />
+	<meta property="og:description" content="Real-time streaming and XR clients in C++ and C#, on 8 platforms." />
 	<meta property="og:url" content="https://ackeskin.github.io" />
 	<meta property="og:image" content="https://ackeskin.github.io/images/procedural_planets.png" />
 	<meta name="twitter:card" content="summary_large_image" />
 
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-	<link rel="stylesheet" href="assets/css/redesign.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500&family=DM+Mono:wght@400;500&family=Jost:wght@500&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="assets/css/site.css" />
 </head>
 <body>
+<a class="skip" href="#about">Skip to content</a>
+<div class="site">
 
-	<!-- Skip to content -->
-	<a href="#main" class="skip-link">Skip to content</a>
+<header class="nav"><div class="wrap">
+	<a class="hud" href="#top" style="color:var(--ink)">AK / <span class="a">VF</span></a>
+	<ul class="hud"><li><a href="#about">About</a></li><li><a href="#experience">Experience</a></li><li><a href="#projects">Projects</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li></ul>
+</div></header>
 
-	<!-- Aurora atmospheric backdrop -->
-	<div class="aurora-bg" aria-hidden="true"></div>
-
-	<!-- Loader -->
-	<div id="loader" aria-hidden="true">
-		<div class="loader__bar"></div>
-		<span class="loader__text">LOADING</span>
+<main>
+<div class="hero" id="top">
+	<div class="br"></div>
+	<div class="cross"></div>
+	<p class="corner tl hud cam">Munich · Cam 01<br>48.14 N 11.58 E</p>
+	<p class="corner tr hud"><span class="dot"></span><span class="a">Live</span><br>8 platforms</p>
+	<p class="corner brc hud cam"><span class="clk">00:00:00</span></p>
+	<div class="mx on hpanel"><p class="mx-t"><i class="mx-d"></i>Program: XR Streaming</p><p class="mx-s"><b>Status:</b><span>Active · 8 platforms</span></p></div>
+	<div class="hc">
+		<h1 data-poi="Admin" data-k="y">Ali Can<br>Keskin</h1>
+		<p class="role">Software Engineer</p>
+		<p class="lede">I build real-time streaming clients for XR. One codebase, eight platforms.</p>
+		<div class="btns"><a class="btn pri" href="#projects">Projects</a><a class="btn" href="docs/Ali_Can_Keskin_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a></div>
 	</div>
+</div>
 
-	<!-- Cursor follower -->
-	<div id="cursor-glow" aria-hidden="true"></div>
-
-	<!-- Morphing wireframe background -->
-	<canvas id="wireframe-bg" aria-hidden="true"></canvas>
-
-	<!-- Navigation -->
-	<nav id="nav">
-		<div class="nav__logo">
-			<span class="nav__logo-bracket">{</span>
-			<span class="nav__logo-name">ACK</span>
-			<span class="nav__logo-bracket">}</span>
+<section id="about"><div class="wrap">
+	<header class="sh"><span class="n">[01]</span><h2>About</h2><span class="ln"></span><span class="hud">Munich, DE</span></header>
+	<div class="about">
+		<div class="photo" data-poi="Admin" data-k="y"><img src="images/profile.jpg" alt="Ali Can Keskin" /><div class="br dim"></div><p class="hud">Subject · A. C. Keskin</p></div>
+		<div class="bio">
+			<p>I'm a software engineer in Munich. For five years I've built real-time streaming and XR clients in C++ and C#.</p>
+			<p>At Hololight I work on low-latency WebRTC streaming and the layers that let one product run on 8 platforms, from native Android (C++/JNI) to the web.</p>
+			<p class="dim">Outside work: games, graphics, computer vision and AI tooling. Also football, chess, piano and Person of Interest.</p>
+			<ul class="skills">
+				<li><span class="sig hud"><i class="s3"><b></b><b></b><b></b></i>Core</span><span class="v">C++, C#, Unity, WebRTC, OpenXR</span></li>
+				<li><span class="sig hud"><i class="s2"><b></b><b></b><b></b></i>Proficient</span><span class="v">JavaScript, WebSockets, WebXR, Java, Android, JNI, OpenGL, CMake, CI/CD, SQL</span></li>
+				<li><span class="sig hud"><i class="s1"><b></b><b></b><b></b></i>Familiar</span><span class="v">Python, Unreal Engine, OpenCV, ImGui, Firebase</span></li>
+			</ul>
 		</div>
-		<ul class="nav__links">
-			<li><a href="#hero" class="nav__link active" data-section="hero"><span class="nav__link-index">00</span>Home</a></li>
-			<li><a href="#about" class="nav__link" data-section="about"><span class="nav__link-index">01</span>About</a></li>
-			<li><a href="#experience" class="nav__link" data-section="experience"><span class="nav__link-index">02</span>Experience</a></li>
-			<li><a href="#education" class="nav__link" data-section="education"><span class="nav__link-index">03</span>Education</a></li>
-			<li><a href="#projects" class="nav__link" data-section="projects"><span class="nav__link-index">04</span>Projects</a></li>
-			<li><a href="#contact" class="nav__link" data-section="contact"><span class="nav__link-index">05</span>Contact</a></li>
+	</div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+	<header class="sh"><span class="n">[02]</span><h2>Experience</h2><span class="ln"></span><span class="hud">5 years · tap to expand</span></header>
+	<div class="ops">
+		<details data-k="b" class="mx op on" data-poi="Asset · Hololight" open>
+			<summary><span><span class="mx-t"><i class="mx-d"></i>Asset: Hololight</span><span class="mx-s"><b>Status:</b><span>Active</span></span></span><span class="op-m hud">Jun 2022 – now · Software Engineer · Munich</span><i class="op-x" aria-hidden="true"></i></summary>
+			<div class="op-b">
+				<p>Real-time XR streaming product in C++ and C#. Streams 3D apps from a PC to headsets, phones and the browser.</p>
+				<ul class="op-l">
+					<li>Led the shared C#/Unity client architecture used on all 8 platforms</li>
+					<li>Designed the WebRTC connection management layer every client uses</li>
+					<li>Lead developer on the Hub Client, an app launcher shipped to OEM partners: app catalog, SSE updates, release pipelines for several vendors</li>
+					<li>Native C++/JNI code for Android headsets, tuned for low latency in the frame delivery path</li>
+					<li>Merged 6 platform build variants into one codebase behind platform abstraction APIs</li>
+					<li>Built the browser client from scratch with JavaScript, WebSockets and WebXR</li>
+					<li>Set up CI/CD with build and test stages for every platform</li>
+					<li>Led the team's move to AI-assisted development: tools, LLM-based PR automation in Python, agent setup and guidelines other teams adopted</li>
+				</ul>
+				<p class="op-k hud">Meta Quest · PICO · HTC Vive Focus 3 · HoloLens 2 · Magic Leap 2 · Windows · Android · Web</p>
+			</div>
+		</details>
+		<details data-k="b" class="mx op" data-poi="Asset · Simovate">
+			<summary><span><span class="mx-t"><i class="mx-d"></i>Asset: Simovate</span><span class="mx-s"><b>Status:</b><span>Archived</span></span></span><span class="op-m hud">Sep 2021 – Mar 2022 · Unity Developer</span><i class="op-x" aria-hidden="true"></i></summary>
+			<div class="op-b">
+				<p>AR/VR apps for industrial training and remote support in Unity, with the heavy parts in C++.</p>
+				<ul class="op-l">
+					<li>CNC milling machine simulator in C++, demoed at Oracle's Industry Innovation Lab</li>
+					<li>Mesh library for real-time cutting and deforming in VR on standalone headsets</li>
+					<li>Mobile remote maintenance app with live annotations, so remote experts could guide technicians</li>
+				</ul>
+				<p class="op-k hud">Unity · C# · C++ · XR</p>
+			</div>
+		</details>
+		<details data-k="b" class="mx op" data-poi="Asset · Medication Hour">
+			<summary><span><span class="mx-t"><i class="mx-d"></i>Asset: Medication Hour</span><span class="mx-s"><b>Status:</b><span>Archived</span></span></span><span class="op-m hud">May – Sep 2020 · Android Developer</span><i class="op-x" aria-hidden="true"></i></summary>
+			<div class="op-b">
+				<p>Built and launched an Android app that reminds people when to take their medication. Java and Firebase for sync, sign-in and push notifications. I took it from idea to Play Store release.</p>
+				<p class="op-k hud">Java · Android · Firebase · <a href="https://play.google.com/store/apps/details?id=com.medhour.ilacsaati" target="_blank" rel="noopener">Play Store →</a></p>
+			</div>
+		</details>
+		<details data-k="b" class="mx op" data-poi="Asset · HAVELSAN">
+			<summary><span><span class="mx-t"><i class="mx-d"></i>Asset: HAVELSAN</span><span class="mx-s"><b>Status:</b><span>Archived</span></span></span><span class="op-m hud">Jul – Aug 2020 · Software Engineering Intern</span><i class="op-x" aria-hidden="true"></i></summary>
+			<div class="op-b">
+				<p>Payroll module of KOVAN, HAVELSAN's enterprise ERP system. Calculation modules, queries and REST endpoints in Java and Spring Boot.</p>
+				<p class="op-k hud">Java · Spring Boot</p>
+			</div>
+		</details>
+		<details data-k="b" class="mx op" data-poi="Asset · Erik Games">
+			<summary><span><span class="mx-t"><i class="mx-d"></i>Asset: Erik Games</span><span class="mx-s"><b>Status:</b><span>Archived</span></span></span><span class="op-m hud">Jun – Jul 2019 · Game Development Intern</span><i class="op-x" aria-hidden="true"></i></summary>
+			<div class="op-b">
+				<p>Gameplay features and performance work on PlayStation 4 games in Unreal Engine 4 and Unity.</p>
+				<p class="op-k hud"><a href="https://store.playstation.com/en-ie/product/EP5823-CUSA17353_00-EGBRAINRETROSP01" target="_blank" rel="noopener">Brain in Retro Space</a> · <a href="https://store.playstation.com/en-gb/product/EP5823-CUSA18906_00-ALPHAINVASIONEG3" target="_blank" rel="noopener">Alpha Invasion</a> · <a href="https://store.playstation.com/tr-tr/product/EP5823-CUSA16329_00-EGBRAINBREAKER01" target="_blank" rel="noopener">Brain Breaker</a></p>
+			</div>
+		</details>
+	</div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+	<header class="sh"><span class="n">[03]</span><h2>Projects</h2><span class="ln"></span><span class="hud">06 items</span></header>
+	<article class="feat" data-poi="Asset · Procedural Planets" data-k="b">
+		<div class="media"><video data-auto muted loop playsinline preload="none" poster="images/procedural_planets.png"><source src="videos/procedural_planets_cinematic.mp4" type="video/mp4" /></video><div class="br"></div><span class="hud h1"><span class="dot"></span>Rec · Featured</span><span class="hud h2">16:9 · Video</span><span class="hud h3">C++ · OpenGL</span></div>
+		<div class="info"><p class="hud k">01 / Graphics</p><h3>Procedural<br>Planets</h3><p>Earth and 12 sci-fi planet types generated on the GPU, with terrain, biomes, oceans, a scattering atmosphere and volumetric clouds. Fly from orbit to the ground with no loading step.</p><span class="hud">C++17 · OpenGL · Compute shaders</span><a class="more" href="https://github.com/AcKeskin/procedural-planets" target="_blank" rel="noopener">Source →</a></div>
+	</article>
+	<div class="grid">
+		<article class="card"><div class="media"><img src="images/canvas_deck.jpg" alt="Canvas Deck editor with slide list, canvas and notes" loading="lazy" /><div class="br dim"></div><span class="hud h1">02</span><span class="hud h2">16:10</span></div><div class="info"><h3>Canvas Deck</h3><p>Obsidian slide decks where every slide is an infinite Excalidraw canvas. Saved views, pen, laser pointer, PDF and HTML export.</p><span class="hud">TypeScript · Obsidian</span><a class="more" href="https://github.com/AcKeskin/canvas-deck" target="_blank" rel="noopener">Source →</a></div></article>
+		<article class="card"><div class="media"><div class="term" aria-hidden="true"><b>$</b> /review src/auth/
+
+Loaded <b>7</b> rules. Auditing 3 files...
+
+<b>F1 · High · Layering</b>  login.ts:42
+  Direct DB call from controller.
+
+(<b>a</b>)pply / (s)kip / (e)dit</div><div class="br dim"></div><span class="hud h1">03</span><span class="hud h2">16:10</span></div><div class="info"><h3>contexture</h3><p>My setup for working with AI in Claude Code: coding rules that load before related code, a review pass after, safety hooks and memory.</p><span class="hud">Node.js · Claude Code</span><a class="more" href="https://github.com/AcKeskin/contexture" target="_blank" rel="noopener">Source →</a></div></article>
+		<article class="card"><div class="media"><video data-auto muted loop playsinline preload="none" poster="images/last_fighter_poster.jpg"><source src="videos/last_fighter.mp4" type="video/mp4" /></video><div class="br dim"></div><span class="hud h1">04</span><span class="hud h2">16:10 · Video</span></div><div class="info"><h3>Last Fighter</h3><p>Space shooter where you defend your station against waves of enemies that keep getting harder.</p><span class="hud">Unity · C#</span><a class="more" href="https://github.com/AcKeskin/LastFighter" target="_blank" rel="noopener">Source →</a></div></article>
+		<article class="card"><div class="media"><video data-auto muted loop playsinline preload="none" poster="images/virtuanance_poster.jpg"><source src="videos/virtuanance.mp4" type="video/mp4" /></video><div class="br dim"></div><span class="hud h1">05</span><span class="hud h2">16:10 · Video</span></div><div class="info"><h3>Virtuanance</h3><p>Remote AR/VR maintenance. An expert sees what the technician sees and draws live annotations. Senior project.</p><span class="hud">Unity · XR · OpenCV</span><a class="more" href="https://github.com/Virtuanance" target="_blank" rel="noopener">Source →</a></div></article>
+		<article class="card"><div class="media"><img src="images/saliency_comparison.png" alt="Original image next to the predicted saliency heatmap" loading="lazy" /><div class="br dim"></div><span class="hud h1">06</span><span class="hud h2">16:10</span></div><div class="info"><h3>Saliency cGAN</h3><p>Research: predicting where people look in an image with a conditional GAN, plus person and face detection channels.</p><span class="hud">Python · Research</span><a class="more" href="docs/CMPE490_Final_Report.pdf" target="_blank" rel="noopener">Report →</a></div></article>
+	</div>
+</div></section>
+
+<section id="education"><div class="wrap">
+	<header class="sh"><span class="n">[04]</span><h2>Education</h2><span class="ln"></span></header>
+	<div class="edu">
+		<ul>
+			<li><h3>TED University</h3><p>B.E. Computer Engineering, minor in Business Administration. 2017 – 2021, GPA 3.48. Graduation project: Virtuanance.</p></li>
+			<li><h3>MIT (edX)</h3><p>Machine Learning with Python, 2020. <a href="https://courses.edx.org/certificates/6313272a840b4d5eb0181c812841be16" target="_blank" rel="noopener" class="a">Certificate →</a></p></li>
 		</ul>
-		<div class="nav__footer">
-			<a href="https://github.com/AcKeskin" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-			<a href="https://www.linkedin.com/in/ali-can-keskin/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-			<a href="mailto:keskinac1998@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+		<div class="renders">
+			<figure><div class="media"><img src="images/cg_trex_tardis.jpg" alt="Low-poly T-Rex and TARDIS render" loading="lazy" /><div class="br dim"></div><span class="hud h3">Render 01</span></div><figcaption>Low-poly T-Rex and TARDIS, Blender</figcaption></figure>
+			<figure><div class="media"><img src="images/cg_reflections.jpg" alt="Reflection and refraction render" loading="lazy" /><div class="br dim"></div><span class="hud h3">Render 02</span></div><figcaption>Reflection, refraction and Blinn-Phong, WebGL</figcaption></figure>
 		</div>
-	</nav>
+	</div>
+</div></section>
 
-	<!-- Mobile nav toggle -->
-	<button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-controls="nav" aria-expanded="false">
-		<span></span><span></span><span></span>
-	</button>
-	<div id="nav-backdrop" class="nav-backdrop"></div>
+<section id="contact"><div class="wrap">
+	<header class="sh"><span class="n">[05]</span><h2>Contact</h2><span class="ln"></span></header>
+	<div class="ct">
+		<div class="br"></div>
+		<p class="pill">Awaiting contact...</p>
+		<p class="big">Get in touch.</p>
+		<p class="sub">Happy to talk about streaming, XR, graphics or side projects.</p>
+		<div class="links">
+			<a href="mailto:keskinac1998@gmail.com"><span class="hud">Email</span><b>keskinac1998@gmail.com</b></a>
+			<a href="https://www.linkedin.com/in/ali-can-keskin/" target="_blank" rel="noopener"><span class="hud">LinkedIn</span><b>ali-can-keskin →</b></a>
+			<a href="https://github.com/AcKeskin" target="_blank" rel="noopener"><span class="hud">GitHub</span><b>AcKeskin →</b></a>
+		</div>
+	</div>
+</div></section>
+</main>
 
-	<!-- Main content -->
-	<main id="main">
+<footer><div class="wrap hud">
+	<ul class="legend" aria-label="Box legend"><li style="--c:var(--k-y)"><i></i>Admin</li><li style="--c:var(--k-b)"><i></i>Asset</li><li style="--c:var(--k-g)"><i></i>Friendly</li><li style="--c:var(--k-w)"><i></i>Irrelevant</li><li style="--c:var(--k-r)"><i></i>Threat</li></ul>
+	<span>© 2026 Ali Can Keskin · End of feed</span>
+</div></footer>
 
-		<!-- Hero -->
-		<section id="hero" class="section hero">
-			<div class="hero__grid-bg" aria-hidden="true"></div>
-			<div class="hero__content">
-				<p class="hero__greeting reveal" data-delay="0">// software engineer</p>
-				<h1 class="hero__name reveal" data-delay="1">Ali Can<br/>Keskin<span class="hero__cursor">_</span></h1>
-				<p class="hero__title reveal" data-delay="2">XR &amp; Systems Engineer</p>
-				<p class="hero__subtitle reveal" data-delay="3">XR &bull; Games &bull; Computer Vision &bull; Systems Architecture &bull; AI</p>
-				<div class="hero__cta reveal" data-delay="4">
-					<a href="#projects" class="btn btn--primary">View Projects</a>
-					<a href="docs/Ali_Can_Keskin_Resume.pdf" class="btn btn--outline" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> Resume</a>
-				</div>
-			</div>
-			<div class="hero__scroll-indicator reveal" data-delay="5">
-				<span>Scroll</span>
-				<div class="hero__scroll-line"></div>
-			</div>
-		</section>
-
-		<!-- About -->
-		<section id="about" class="section section--alt about">
-			<div class="section__header">
-				<span class="section__index">01</span>
-				<h2 class="section__title">About Me</h2>
-				<div class="section__line"></div>
-			</div>
-			<div class="about__grid">
-				<div class="about__image-col reveal-slide">
-					<div class="about__image-wrapper">
-						<img src="images/profile.jpg" alt="Ali Can Keskin, software engineer" class="about__image" />
-						<div class="about__image-border"></div>
-					</div>
-				</div>
-				<div class="about__text-col">
-					<p class="about__bio reveal-slide">Software engineer with 5 years of building real-time streaming and cross-platform clients in C++ and C#. I work on low-latency WebRTC, codec negotiation and the layers that let one product run on 8+ platforms, from native Android (C++/JNI) to the web.</p>
-					<p class="about__bio reveal-slide">Outside of work I build games, play with computer vision and software architecture, and follow what is new in AI. I care how things are built, not only what gets built. I like code with clear owners that still holds up a year later.</p>
-					<div class="about__stats reveal-slide">
-						<div class="about__stat">
-							<span class="about__stat-number">5</span>
-							<span class="about__stat-label">Years Experience</span>
-						</div>
-						<div class="about__stat">
-							<span class="about__stat-number">8+</span>
-							<span class="about__stat-label">Platforms Shipped</span>
-						</div>
-						<div class="about__stat">
-							<span class="about__stat-number">3</span>
-							<span class="about__stat-label">Published Games</span>
-						</div>
-						<div class="about__stat about__stat--muted">
-							<span class="about__stat-number">???</span>
-							<span class="about__stat-label">Unfinished Side Projects</span>
-						</div>
-					</div>
-					<div class="about__tech reveal-slide">
-						<span class="tag tag--core">C++</span>
-						<span class="tag tag--core">C#</span>
-						<span class="tag tag--core">Unity</span>
-						<span class="tag tag--core">OpenXR</span>
-						<span class="tag tag--core">WebRTC</span>
-						<span class="tag tag--core">XR</span>
-						<span class="tag tag--proficient">OpenGL</span>
-						<span class="tag tag--proficient">JavaScript</span>
-						<span class="tag tag--proficient">CMake</span>
-						<span class="tag tag--proficient">Git</span>
-						<span class="tag tag--proficient">Java</span>
-						<span class="tag tag--proficient">WebSockets</span>
-						<span class="tag tag--proficient">WebXR</span>
-						<span class="tag tag--proficient">JNI</span>
-						<span class="tag tag--proficient">Android</span>
-						<span class="tag tag--proficient">SQL</span>
-						<span class="tag tag--proficient">CI/CD</span>
-						<span class="tag tag--proficient">MRTK3</span>
-						<span class="tag tag--proficient">XR Interaction Toolkit</span>
-						<span class="tag tag--familiar">Python</span>
-						<span class="tag tag--familiar">Unreal Engine</span>
-						<span class="tag tag--familiar">ImGui</span>
-						<span class="tag tag--familiar">OpenCV</span>
-						<span class="tag tag--familiar">Firebase</span>
-					</div>
-					<div class="about__tech-legend reveal-slide">
-						<span class="legend__item"><span class="legend__dot legend__dot--core"></span>Core</span>
-						<span class="legend__item"><span class="legend__dot legend__dot--proficient"></span>Proficient</span>
-						<span class="legend__item"><span class="legend__dot legend__dot--familiar"></span>Familiar</span>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Beyond Code -->
-		<section id="beyond" class="section beyond">
-			<div class="section__header">
-				<span class="section__index">//</span>
-				<h2 class="section__title">Beyond Code</h2>
-				<div class="section__line"></div>
-			</div>
-			<div class="beyond__grid">
-				<div class="beyond__card reveal-slide">
-					<i class="fa-solid fa-gamepad beyond__icon"></i>
-					<h3 class="beyond__label">Games</h3>
-					<p class="beyond__desc">PC gamer. Competitive shooters, story-driven single-player, anything with good design.</p>
-				</div>
-				<div class="beyond__card reveal-slide">
-					<i class="fa-solid fa-headphones beyond__icon"></i>
-					<h3 class="beyond__label">Music</h3>
-					<p class="beyond__desc">Rock, metal, rap, pop and film soundtracks. I play piano, though not as often as I should lately.</p>
-				</div>
-				<div class="beyond__card reveal-slide">
-					<i class="fa-solid fa-futbol beyond__icon"></i>
-					<h3 class="beyond__label">Sports</h3>
-					<p class="beyond__desc">Football, basketball, table tennis, swimming and volleyball. Also chess, if that counts.</p>
-				</div>
-				<div class="beyond__card reveal-slide">
-					<i class="fa-solid fa-tv beyond__icon"></i>
-					<h3 class="beyond__label">Series</h3>
-					<p class="beyond__desc">Smart characters and darker tones. Person of Interest, Sherlock, that kind of thing.</p>
-				</div>
-			</div>
-		</section>
-
-		<!-- Experience -->
-		<section id="experience" class="section experience">
-			<div class="section__header">
-				<span class="section__index">02</span>
-				<h2 class="section__title">Experience</h2>
-				<div class="section__line"></div>
-			</div>
-			<div class="experience__timeline">
-
-				<article class="exp-card reveal-slide">
-					<div class="exp-card__date">
-						<span class="exp-card__period">JUN 2022 — PRESENT</span>
-					</div>
-					<div class="exp-card__body">
-						<div class="exp-card__dot"></div>
-						<h3 class="exp-card__title">Software Engineer</h3>
-						<h4 class="exp-card__company">Hololight &mdash; Munich, DE</h4>
-						<ul class="exp-card__list">
-							<li>Led the shared C#/Unity client architecture for an enterprise real-time streaming product on 8 platforms (Meta Quest, PICO, HTC Vive Focus 3, HoloLens 2, Magic Leap 2, Windows, Android, Web)</li>
-							<li>Designed the WebRTC connection management layer that every platform client uses</li>
-							<li>Lead developer on the Hub Client, an app launcher shipped to OEM partners. Built the app catalog, SSE-based updates and release pipelines for several vendors, and coordinated releases with partner teams</li>
-							<li>Wrote native C++/JNI code for Android-based headsets and tuned the frame delivery path for low latency</li>
-							<li>Merged 6 platform-specific build variants into one codebase behind platform abstraction APIs</li>
-							<li>Built the browser client from scratch with JavaScript, WebSockets and WebXR, so people can stream in desktop and headset browsers without installing anything</li>
-							<li>Set up CI/CD with automated build and test stages for every platform</li>
-							<li>Led the team's move to AI-assisted development: picked and rolled out tools, built LLM-based PR automation in Python, set up agent infrastructure and wrote usage guidelines that other teams later adopted</li>
-						</ul>
-						<div class="exp-card__tags">
-							<span class="tag tag--sm">C++</span>
-							<span class="tag tag--sm">C#</span>
-							<span class="tag tag--sm">JavaScript</span>
-							<span class="tag tag--sm">WebRTC</span>
-							<span class="tag tag--sm">WebXR</span>
-							<span class="tag tag--sm">OpenXR</span>
-							<span class="tag tag--sm">Unity</span>
-							<span class="tag tag--sm">JNI</span>
-							<span class="tag tag--sm">Python</span>
-							<span class="tag tag--sm">CI/CD</span>
-						</div>
-					</div>
-				</article>
-
-				<article class="exp-card reveal-slide">
-					<div class="exp-card__date">
-						<span class="exp-card__period">SEP 2021 — MAR 2022</span>
-					</div>
-					<div class="exp-card__body">
-						<div class="exp-card__dot"></div>
-						<h3 class="exp-card__title">Unity Developer</h3>
-						<h4 class="exp-card__company">Simovate &mdash; Ankara, TR</h4>
-						<p class="exp-card__desc">Built AR/VR apps for industrial training and remote support in Unity (C#), with the heavy parts in C++. Made a CNC milling machine simulator in C++ that was demoed at Oracle's Industry Innovation Lab. Wrote a mesh library for real-time cutting and deforming in VR on standalone headsets. Also built a mobile remote maintenance app with live annotations and data streaming, so remote experts could guide technicians in the field.</p>
-						<div class="exp-card__tags">
-							<span class="tag tag--sm">Unity</span>
-							<span class="tag tag--sm">C#</span>
-							<span class="tag tag--sm">C++</span>
-							<span class="tag tag--sm">XR</span>
-						</div>
-					</div>
-				</article>
-
-				<article class="exp-card reveal-slide">
-					<div class="exp-card__date">
-						<span class="exp-card__period">MAY — SEP 2020</span>
-					</div>
-					<div class="exp-card__body">
-						<div class="exp-card__dot"></div>
-						<h3 class="exp-card__title">Android Developer</h3>
-						<h4 class="exp-card__company">Medication Hour &mdash; Ankara, TR</h4>
-						<p class="exp-card__desc">Built and launched Medication Hour, an Android app that reminds people when to take their medication. Java and Firebase for sync, sign-in and push notifications. I took it from idea to Play Store release.</p>
-						<div class="exp-card__tags">
-							<span class="tag tag--sm">Java</span>
-							<span class="tag tag--sm">Android</span>
-							<span class="tag tag--sm">Firebase</span>
-						</div>
-						<a href="https://play.google.com/store/apps/details?id=com.medhour.ilacsaati" class="exp-card__link" target="_blank" rel="noopener">View on Play Store <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-					</div>
-				</article>
-
-				<article class="exp-card reveal-slide">
-					<div class="exp-card__date">
-						<span class="exp-card__period">JUL — AUG 2020</span>
-					</div>
-					<div class="exp-card__body">
-						<div class="exp-card__dot"></div>
-						<h3 class="exp-card__title">Software Engineering Intern</h3>
-						<h4 class="exp-card__company">HAVELSAN &mdash; Ankara, TR</h4>
-						<p class="exp-card__desc">Worked on the payroll module of KOVAN, HAVELSAN's enterprise ERP system. Wrote calculation modules, queries and REST endpoints in Java and Spring Boot to automate payroll.</p>
-						<div class="exp-card__tags">
-							<span class="tag tag--sm">Java</span>
-							<span class="tag tag--sm">Spring Boot</span>
-						</div>
-					</div>
-				</article>
-
-				<article class="exp-card reveal-slide">
-					<div class="exp-card__date">
-						<span class="exp-card__period">JUN — JUL 2019</span>
-					</div>
-					<div class="exp-card__body">
-						<div class="exp-card__dot"></div>
-						<h3 class="exp-card__title">Game Development Intern</h3>
-						<h4 class="exp-card__company">Erik Games &mdash; Ankara, TR</h4>
-						<p class="exp-card__desc">Worked on gameplay features and performance for PlayStation 4 games in Unreal Engine 4 and Unity.</p>
-						<div class="exp-card__tags">
-							<span class="tag tag--sm">C#</span>
-							<span class="tag tag--sm">Unity</span>
-							<span class="tag tag--sm">Unreal Engine</span>
-							<span class="tag tag--sm">PS4</span>
-						</div>
-						<div class="exp-card__links">
-							<a href="https://store.playstation.com/en-ie/product/EP5823-CUSA17353_00-EGBRAINRETROSP01" class="exp-card__link" target="_blank" rel="noopener">Brain in Retro Space <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-							<a href="https://store.playstation.com/en-gb/product/EP5823-CUSA18906_00-ALPHAINVASIONEG3" class="exp-card__link" target="_blank" rel="noopener">Alpha Invasion <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-							<a href="https://store.playstation.com/tr-tr/product/EP5823-CUSA16329_00-EGBRAINBREAKER01" class="exp-card__link" target="_blank" rel="noopener">Brain Breaker <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-						</div>
-					</div>
-				</article>
-
-			</div>
-		</section>
-
-		<!-- Education -->
-		<section id="education" class="section education">
-			<div class="section__header">
-				<span class="section__index">03</span>
-				<h2 class="section__title">Education &amp; Certifications</h2>
-				<div class="section__line"></div>
-			</div>
-			<div class="education__grid">
-
-				<article class="edu-card reveal-slide">
-					<div class="edu-card__icon"><i class="fa-solid fa-graduation-cap"></i></div>
-					<h3 class="edu-card__title">TED University</h3>
-					<p class="edu-card__subtitle">B.E. Computer Engineering | Minor in Business Administration</p>
-					<p class="edu-card__period">Sept 2017 — May 2021 &mdash; Ankara, TR</p>
-					<p class="edu-card__detail">GPA: 3.48/4.0. Graduation project: Virtuanance, remote AR/VR maintenance over WebRTC.</p>
-				</article>
-
-				<article class="edu-card reveal-slide">
-					<div class="edu-card__icon"><i class="fa-solid fa-certificate"></i></div>
-					<h3 class="edu-card__title">MITx 6.86x</h3>
-					<p class="edu-card__subtitle">Machine Learning with Python: From Linear Models to Deep Learning</p>
-					<p class="edu-card__period">Dec 2020 &mdash; MIT (edX)</p>
-					<p class="edu-card__detail">Linear and nonlinear classifiers, regression, collaborative filtering, neural networks, unsupervised and reinforcement learning.</p>
-					<a href="https://courses.edx.org/certificates/6313272a840b4d5eb0181c812841be16" class="exp-card__link" target="_blank" rel="noopener">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-				</article>
-
-			</div>
-
-			<div class="education__coursework">
-				<h3 class="education__coursework-title reveal-slide">Coursework Highlights</h3>
-				<p class="education__coursework-desc reveal-slide">From Computer Graphics (CMPE 360): modeling, lighting and rendering in Blender and WebGL.</p>
-				<div class="education__gallery">
-					<figure class="edu-gallery__item reveal-slide">
-						<img src="images/cg_trex_tardis.jpg" alt="Low-poly T-Rex and TARDIS scene" loading="lazy" />
-						<figcaption>Low-poly T-Rex and TARDIS with custom textures and lighting</figcaption>
-					</figure>
-					<figure class="edu-gallery__item reveal-slide">
-						<img src="images/cg_reflections.jpg" alt="Reflection and refraction render" loading="lazy" />
-						<figcaption>Reflection, refraction, and Blinn-Phong shading</figcaption>
-					</figure>
-				</div>
-			</div>
-		</section>
-
-		<!-- Projects -->
-		<section id="projects" class="section section--alt projects">
-			<div class="section__header">
-				<span class="section__index">04</span>
-				<h2 class="section__title">Projects</h2>
-				<div class="section__line"></div>
-			</div>
-			<div class="projects__grid">
-
-				<article class="project-card project-card--featured reveal-slide">
-					<div class="project-card__media">
-						<video autoplay loop muted playsinline poster="images/procedural_planets.png">
-							<source src="videos/procedural_planets_cinematic.mp4" type="video/mp4" />
-						</video>
-						<div class="project-card__overlay"></div>
-					</div>
-					<div class="project-card__content">
-						<span class="project-card__label">Featured Project</span>
-						<h3 class="project-card__title">Procedural Planets</h3>
-						<p class="project-card__desc">A procedural planet renderer in C++17 and OpenGL. It makes Earth and 12 sci-fi planet types (dune, ice, lava, crystal and more) on the GPU, with terrain, biomes, oceans, a scattering atmosphere and volumetric clouds. You can fly from orbit to the ground with no loading step.</p>
-						<div class="project-card__tags">
-							<span class="tag tag--sm">C++17</span>
-							<span class="tag tag--sm">OpenGL</span>
-							<span class="tag tag--sm">Compute Shaders</span>
-							<span class="tag tag--sm">Procedural Generation</span>
-						</div>
-						<a href="https://github.com/AcKeskin/procedural-planets" class="project-card__link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Source Code</a>
-					</div>
-				</article>
-
-				<article class="project-card reveal-slide">
-					<div class="project-card__media project-card__media--terminal">
-						<div class="terminal">
-							<div class="terminal__bar">
-								<span class="terminal__dot"></span>
-								<span class="terminal__dot"></span>
-								<span class="terminal__dot"></span>
-								<span class="terminal__name">contexture — /review</span>
-							</div>
-							<pre class="terminal__body"><code><span class="terminal__prompt">$</span> /review src/auth/
-
-Loaded <span class="terminal__hl">7</span> architectural rules.
-Auditing 3 files...
-
-<span class="terminal__warn">F1 · High · Layering</span> — login.ts:42
-  Direct DB call from controller layer.
-
-(<span class="terminal__hl">a</span>)pply / (s)kip / (e)dit / (w)on't-fix<span class="terminal__cursor">_</span></code></pre>
-						</div>
-						<div class="project-card__overlay"></div>
-					</div>
-					<div class="project-card__content">
-						<span class="project-card__label">Tooling / AI</span>
-						<h3 class="project-card__title">contexture</h3>
-						<p class="project-card__desc">The setup I use to work with AI in Claude Code: a set of coding rules, safety hooks and a memory store. Write a rule down once and it loads before related code and gets checked after. Every change is proposed first, nothing is applied silently.</p>
-						<div class="project-card__tags">
-							<span class="tag tag--sm">Node.js</span>
-							<span class="tag tag--sm">Claude Code</span>
-							<span class="tag tag--sm">Agent Tooling</span>
-							<span class="tag tag--sm">Developer Workflow</span>
-						</div>
-						<a href="https://github.com/AcKeskin/contexture" class="project-card__link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Source Code</a>
-					</div>
-				</article>
-
-				<article class="project-card reveal-slide">
-					<div class="project-card__media">
-						<img src="images/canvas_deck.jpg" alt="Canvas Deck editor with slide list, canvas and speaker notes" loading="lazy" />
-						<div class="project-card__overlay"></div>
-					</div>
-					<div class="project-card__content">
-						<span class="project-card__label">Obsidian Plugin</span>
-						<h3 class="project-card__title">Canvas Deck</h3>
-						<p class="project-card__desc">Slide decks in Obsidian where every slide is an infinite Excalidraw canvas. Save views on a slide and present mode flies between them. Has a pen, laser pointer, live code and web embeds, and PDF/HTML export. Built with contexture.</p>
-						<div class="project-card__tags">
-							<span class="tag tag--sm">TypeScript</span>
-							<span class="tag tag--sm">Obsidian</span>
-							<span class="tag tag--sm">Excalidraw</span>
-						</div>
-						<a href="https://github.com/AcKeskin/canvas-deck" class="project-card__link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Source Code</a>
-					</div>
-				</article>
-
-				<article class="project-card reveal-slide">
-					<div class="project-card__media">
-						<video autoplay loop muted playsinline preload="metadata" poster="images/last_fighter_poster.jpg">
-							<source src="videos/last_fighter.mp4" type="video/mp4" />
-						</video>
-						<div class="project-card__overlay"></div>
-					</div>
-					<div class="project-card__content">
-						<span class="project-card__label">Game</span>
-						<h3 class="project-card__title">Last Fighter</h3>
-						<p class="project-card__desc">A space shooter where you defend your station against waves of enemies. Made in Unity and C#, with its own enemy AI and difficulty that ramps up.</p>
-						<div class="project-card__tags">
-							<span class="tag tag--sm">Unity</span>
-							<span class="tag tag--sm">C#</span>
-							<span class="tag tag--sm">3D</span>
-						</div>
-						<a href="https://github.com/AcKeskin/LastFighter" class="project-card__link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Source Code</a>
-					</div>
-				</article>
-
-				<article class="project-card reveal-slide">
-					<div class="project-card__media">
-						<video autoplay loop muted playsinline preload="metadata" poster="images/virtuanance_poster.jpg">
-							<source src="videos/virtuanance.mp4" type="video/mp4" />
-						</video>
-						<div class="project-card__overlay"></div>
-					</div>
-					<div class="project-card__content">
-						<span class="project-card__label">Senior Project</span>
-						<h3 class="project-card__title">Virtuanance</h3>
-						<p class="project-card__desc">Remote AR/VR maintenance. An expert sees what the technician in the field sees, pulls up 3D models and draws live annotations. Unity, with OpenCV for marker tracking.</p>
-						<div class="project-card__tags">
-							<span class="tag tag--sm">Unity</span>
-							<span class="tag tag--sm">XR</span>
-							<span class="tag tag--sm">OpenCV</span>
-						</div>
-						<a href="https://github.com/Virtuanance" class="project-card__link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Source Code</a>
-					</div>
-				</article>
-
-				<article class="project-card reveal-slide">
-					<div class="project-card__media">
-						<img src="images/saliency_comparison.png" alt="Original image vs predicted saliency heatmap" loading="lazy" />
-						<div class="project-card__overlay"></div>
-					</div>
-					<div class="project-card__content">
-						<span class="project-card__label">Research</span>
-						<h3 class="project-card__title">Saliency Prediction with cGAN</h3>
-						<p class="project-card__desc">Undergraduate research on predicting where people look in an image, using a conditional GAN. I added person and face detection channels (DeepLabV3+ and DLIB), which improved accuracy on four viewing tasks.</p>
-						<div class="project-card__tags">
-							<span class="tag tag--sm">Python</span>
-							<span class="tag tag--sm">GAN</span>
-							<span class="tag tag--sm">Computer Vision</span>
-						</div>
-						<a href="docs/CMPE490_Final_Report.pdf" class="project-card__link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> Report</a>
-					</div>
-				</article>
-
-			</div>
-		</section>
-
-		<!-- Contact -->
-		<section id="contact" class="section contact">
-			<div class="section__header">
-				<span class="section__index">05</span>
-				<h2 class="section__title">Contact</h2>
-				<div class="section__line"></div>
-			</div>
-			<div class="contact__content reveal-slide">
-				<div class="contact__status">
-					<span class="contact__status-dot"></span>
-					Based in Munich, DE
-				</div>
-				<p class="contact__heading">Get in touch.</p>
-				<p class="contact__desc">Happy to talk about games, XR, graphics, architecture or side projects. Send me a message.</p>
-				<div class="contact__links">
-					<a href="mailto:keskinac1998@gmail.com" class="btn btn--primary"><i class="fa-solid fa-envelope"></i> Send Email</a>
-					<a href="https://www.linkedin.com/in/ali-can-keskin/" class="btn btn--outline" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
-				</div>
-			</div>
-		</section>
-
-		<!-- Footer -->
-		<footer id="footer" class="footer">
-			<div class="footer__content">
-				<div class="footer__left">
-					<span class="footer__logo">
-						<span class="nav__logo-bracket">{</span>
-						<span class="nav__logo-name">ACK</span>
-						<span class="nav__logo-bracket">}</span>
-					</span>
-					<p class="footer__tagline">Still tweaking.</p>
-				</div>
-				<div class="footer__right">
-					<div class="footer__socials">
-						<a href="https://github.com/AcKeskin" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-						<a href="https://www.linkedin.com/in/ali-can-keskin/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-						<a href="mailto:keskinac1998@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-					</div>
-				</div>
-			</div>
-			<div class="footer__bottom">
-				<p>&copy; 2026 Ali Can Keskin</p>
-			</div>
-		</footer>
-
-	</main>
-
-	<script src="assets/js/redesign.js"></script>
-
+</div>
+<script src="assets/js/site.js"></script>
 </body>
 </html>
