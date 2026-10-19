@@ -33,7 +33,9 @@ go()},{passive:true});
 addEventListener("scroll",function(){if(el){box(el);go()}},{passive:true});
 document.documentElement.addEventListener("mouseleave",function(){shown=false;b.classList.remove("on")});
 })();
-/* Play project videos only while on screen. */
-(function(){var vs=document.querySelectorAll("video[data-auto]");if(!vs.length||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.play().catch(function(){});else e.target.pause()})},{threshold:.25});
+/* Play project videos only while on screen. Fall back to controls when motion is reduced or autoplay is blocked. */
+(function(){var vs=document.querySelectorAll("video[data-auto]");if(!vs.length)return;
+function manual(v){v.controls=true}
+if(matchMedia("(prefers-reduced-motion: reduce)").matches||!("IntersectionObserver" in window)){vs.forEach(manual);return}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting){var p=v.play();if(p)p.catch(function(){manual(v)})}else v.pause()})},{threshold:.25});
 vs.forEach(function(v){io.observe(v)})})();
