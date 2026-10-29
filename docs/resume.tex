@@ -1,0 +1,383 @@
+\documentclass[10pt, a4paper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2 cm, % separation between body and page edge from the top
+    bottom=2 cm, % separation between body and page edge from the bottom
+    left=2 cm, % separation between body and page edge from the left
+    right=2 cm, % separation between body and page edge from the right
+    footskip=1.0 cm, % separation between body and footer
+    % showframe % for debugging
+]{geometry} % for adjusting page geometry
+\usepackage{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 79, 144} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={Ali Can Keskin's Resume},
+    pdfauthor={Ali Can Keskin},
+    pdfsubject={Phone: +49 151 6848 1635},
+    colorlinks=true,
+    urlcolor=primaryColor, breaklinks
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page break right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generated pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    % \usepackage[T1]{fontenc} % this breaks sb2nov
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0cm} % set column separation
+\makeatletter
+\let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
+\patchcmd{\ps@customFooterStyle}{\thepage}{
+    \color{gray}\textit{\small Ali Can Keskin - Page \thepage{} of \pageref*{LastPage}}
+}{}{} % replace number by desired string
+\makeatother
+\pagestyle{customFooterStyle}
+\newcommand{\sectionSpacing}{\vspace{0.45cm}}
+\newcommand{\itemSpacing}{\vspace{0.25cm}}
+\newcommand{\elementSpacing}{\vspace{0.20cm}}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.3 cm
+}{
+    % bottom space:
+    0.2 cm
+} % section title spacing
+
+\renewcommand\labelitemi{$\circ$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0.2 cm + 0.00001 cm
+    }{
+        0.2 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+\newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+    }}}%
+  }%
+}%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
+    \placelastupdatedtext
+    \begin{header}
+        \textbf{\fontsize{24 pt}{24 pt}\selectfont Ali Can Keskin}
+
+        \sectionSpacing
+
+        \normalsize
+        \mbox{{\color{black}\footnotesize\faMapMarker*}\hspace*{0.13cm}Munich, DE}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{mailto:keskinac1998@gmail.com}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}keskinac1998@gmail.com}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{tel:+49-151-68481635}{\color{black}{\footnotesize\faPhone*}\hspace*{0.13cm}+49 151 6848 1635}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://github.com/AcKeskin}{\color{black}{\footnotesize\faGithub}\hspace*{0.13cm}AcKeskin}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://www.linkedin.com/in/ali-can-keskin/}{\color{black}{\footnotesize\faLinkedinIn}\hspace*{0.13cm}ali-can-keskin}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://ackeskin.github.io}{\color{black}{\footnotesize\faGlobe}\hspace*{0.13cm}ackeskin.github.io}}%
+
+    \end{header}
+
+    \sectionSpacing
+
+    \section{Professional Summary}
+        \itemSpacing
+        \begin{onecolentry}
+          Software engineer with 5 years of experience in real-time streaming and cross-platform client architecture in C++ and C\#. Built low-latency WebRTC pipelines, codec negotiation, and platform abstraction layers for an enterprise product on 8 platforms, from native Android (C++/JNI) to the web.
+        \end{onecolentry}
+
+        \sectionSpacing
+
+    \section{Experience}
+
+        \begin{twocolentry}{
+        \textit{Munich, DE} \\
+        \textit{Jun 2022 -- Present}}
+            \textbf{Software Engineer} \\
+            \textit{Hololight}
+        \end{twocolentry}
+
+        \elementSpacing
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Led development of a unified C\#/\textbf{Unity} client architecture for an enterprise real-time streaming product on 8 platforms (Meta Quest, PICO, HTC Vive Focus 3, HoloLens 2, Magic Leap 2, Windows, Android, Web).
+                \item Designed the shared \textbf{WebRTC} connection management layer used by all platform clients.
+                \item Lead developer on the \textbf{Hub Client}, an app launcher shipped to OEM partners. Built the app catalog, SSE-based updates, and multi-vendor release pipelines, and coordinated releases with partner engineering teams.
+                \item Implemented native \textbf{C++}/JNI integrations for Android-based headsets and optimized the frame delivery path for low latency.
+                \item Merged 6 platform-specific build variants into a single codebase using platform abstraction APIs.
+                \item Built a browser client from scratch in \textbf{JavaScript} with WebSockets and \textbf{WebXR}, enabling zero-install streaming in desktop and headset browsers.
+                \item Set up \textbf{CI/CD pipelines} with automated build and test stages for every platform.
+                \item Led the team's adoption of \textbf{AI-assisted development}: evaluated and rolled out tools, built LLM-powered pull request automation in \textbf{Python}, set up agent infrastructure, and wrote usage guidelines later adopted by other teams.
+            \end{highlights}
+        \end{onecolentry}
+
+        \itemSpacing
+
+        \begin{twocolentry}{
+        \textit{Ankara, TR} \\
+        \textit{Sep 2021 -- Mar 2022}}
+            \textbf{Unity Developer} \\
+            \textit{Simovate}
+        \end{twocolentry}
+
+        \elementSpacing
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Developed AR/VR applications for industrial training and remote support in \textbf{Unity} (C\#), with performance-critical modules in \textbf{C++}.
+                \item Built a \textbf{CNC milling machine simulator} in C++, demoed at Oracle's Industry Innovation Lab.
+                \item Built a custom \textbf{mesh manipulation library} for real-time cutting and deformation in VR on standalone headsets.
+                \item Created a mobile \textbf{remote maintenance app} with live annotations and data streaming, letting remote experts guide field technicians.
+            \end{highlights}
+        \end{onecolentry}
+
+        \itemSpacing
+
+        \begin{twocolentry}{
+        \textit{Ankara, TR} \\
+        \textit{May 2020 -- Sep 2020}}
+            \textbf{Android Developer} \\
+            \textit{Medication Hour}
+        \end{twocolentry}
+
+        \elementSpacing
+
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Designed and launched \href{https://play.google.com/store/apps/details?id=com.medhour.ilacsaati}{\textbf{Medication Hour}}, an Android app on Google Play for managing medication schedules with custom reminders.
+                \item Built the \textbf{Java} and \textbf{Firebase} backend for real-time sync, authentication, and push notifications.
+                \item Owned the full product lifecycle: concept, UI design, development, release, and maintenance.
+            \end{highlights}
+        \end{onecolentry}
+
+        \itemSpacing
+
+        \begin{twocolentry}{
+        \textit{Ankara, TR} \\
+        \textit{Jul 2020 -- Aug 2020}}
+            \textbf{Software Engineering Intern} \\
+            \textit{HAVELSAN}
+        \end{twocolentry}
+        \elementSpacing
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Worked on the \textbf{payroll module} of \textbf{KOVAN}, HAVELSAN's enterprise ERP system.
+                \item Implemented calculation modules, queries, and REST API endpoints in \textbf{Java}/\textbf{Spring Boot} to automate payroll processing.
+            \end{highlights}
+        \end{onecolentry}
+
+        \itemSpacing
+
+        \begin{twocolentry}{
+        \textit{Ankara, TR} \\
+        \textit{Jun 2019 -- Jul 2019}}
+            \textbf{Game Development Intern} \\
+            \textit{Erik Games}
+        \end{twocolentry}
+        \elementSpacing
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Worked on gameplay features and performance for \textbf{PlayStation 4} games in \textbf{Unreal Engine 4} and \textbf{Unity}.
+                \item Contributed to 3 published titles:
+                \href{https://store.playstation.com/en-gb/product/EP5823-CUSA17353_00-EGBRAINRETROSP01}{EG Brain Retro Synthesis},
+                \href{https://store.playstation.com/en-gb/product/EP5823-CUSA18906_00-ALPHAINVASIONEG3}{Alpha Invasion},
+                \href{https://store.playstation.com/en-gb/product/EP5823-CUSA16329_00-EGBRAINBREAKER01}{EG Brain Breaker}.
+            \end{highlights}
+        \end{onecolentry}
+    \sectionSpacing
+
+    \section{Education}
+
+        \begin{twocolentry}{
+        \textit{Ankara, TR} \\
+        \textit{Sep 2017 -- May 2021}}
+        \textbf{TED University} \\
+        \textit{B.E. in Computer Engineering} \\
+        \textit{Minor in Business Administration}
+        \end{twocolentry}
+
+        \itemSpacing
+        \begin{onecolentry}
+            \begin{highlights}
+                \item GPA: 3.48/4.0
+                \item \textbf{Graduation Project:} Virtuanance, a WebRTC-based AR/VR remote maintenance app
+                \item \textbf{Relevant Coursework:} Computer Architecture, Computer Vision, Machine Learning, Simulation
+            \end{highlights}
+        \end{onecolentry}
+    \sectionSpacing
+
+    \section{Skills}
+
+        \begin{onecolentry}
+            \textbf{Languages:} C++, C\#, JavaScript, Java, Python, SQL
+        \end{onecolentry}
+
+        \elementSpacing
+
+        \begin{onecolentry}
+            \textbf{Technologies:} WebRTC, WebSockets, WebXR, OpenXR, REST APIs, Unity, OpenGL, Unreal Engine
+        \end{onecolentry}
+
+        \elementSpacing
+
+        \begin{onecolentry}
+            \textbf{Practices \& Tools:} Git, CMake, CI/CD, Unit \& Integration Testing, Code Review, JNI
+        \end{onecolentry}
+
+        \elementSpacing
+
+        \begin{onecolentry}
+            \textbf{Platforms:} Android, Windows, Web, XR headsets (Meta Quest, PICO, HTC Vive Focus 3, HoloLens 2, Magic Leap 2)
+        \end{onecolentry}
+
+        \elementSpacing
+
+        \begin{onecolentry}
+            \textbf{Specializations:} Real-Time Systems, Low-Latency Networking, Cross-Platform Architecture, Performance Optimization, AR/VR
+        \end{onecolentry}
+
+    \sectionSpacing
+
+    \section{Projects}
+
+        \begin{twocolentry}{
+        \href{https://github.com/AcKeskin/procedural-planets}{GitHub}}
+         \textbf{Procedural Planets}: \textit{GPU-Accelerated Planet Renderer}
+        \end{twocolentry}
+
+        \elementSpacing
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Procedural planet renderer in \textbf{C++17}/\textbf{OpenGL 4.3+}. Compute shaders generate terrain in real time with icosahedron-based LOD.
+                \item Features atmospheric scattering, ocean rendering, biome classification, and multi-layer noise (Simplex + fractal).
+            \end{highlights}
+        \end{onecolentry}
+
+
+    \sectionSpacing
+
+    \section{Certifications}
+
+        \begin{twocolentry}{
+        \textit{Dec 2020}}
+            \textbf{Machine Learning with Python: From Linear Models to Deep Learning}
+
+            \textit{Massachusetts Institute of Technology (MIT)}
+        \end{twocolentry}
+
+        \elementSpacing
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Covered neural networks, reinforcement learning, linear and nonlinear classification, and collaborative filtering.
+                \href{https://courses.edx.org/certificates/6313272a840b4d5eb0181c812841be16}{View Certificate}
+            \end{highlights}
+        \end{onecolentry}
+
+\end{document}
