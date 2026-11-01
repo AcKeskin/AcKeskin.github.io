@@ -110,6 +110,7 @@ section{padding:112px 0 0}
 .grid{display:grid;grid-template-columns:repeat(6,1fr);gap:40px 24px}
 .grid .card{grid-column:span 2}
 .grid .card:nth-child(-n+2){grid-column:span 3}
+.grid .card:nth-last-child(-n+2){grid-column:span 3}
 .media{position:relative;aspect-ratio:16/10;background:var(--panel);overflow:hidden}
 .feat .media{aspect-ratio:16/9}
 .media::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,.16) 0 1px,transparent 1px 3px)}
@@ -189,7 +190,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
   .feat{grid-template-columns:1fr;gap:16px}
   .feat .info h3{font-size:40px}
   .grid{grid-template-columns:1fr;gap:36px}
-  .grid .card,.grid .card:nth-child(-n+2){grid-column:auto}
+  .grid .card,.grid .card:nth-child(-n+2),.grid .card:nth-last-child(-n+2){grid-column:auto}
   .info h3{font-size:28px}
   .edu{grid-template-columns:1fr;gap:36px}
   .ct{padding:40px 22px;margin:0 -4px}
