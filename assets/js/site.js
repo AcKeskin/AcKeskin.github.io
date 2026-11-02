@@ -39,3 +39,27 @@ function manual(v){v.controls=true}
 if(matchMedia("(prefers-reduced-motion: reduce)").matches||!("IntersectionObserver" in window)){vs.forEach(manual);return}
 var io=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting){var p=v.play();if(p)p.catch(function(){manual(v)})}else v.pause()})},{threshold:.25});
 vs.forEach(function(v){io.observe(v)})})();
+
+// Ask section: static plexus background
+(function () {
+  var c = document.querySelector(".plexus");
+  if (!c) return;
+  var x = c.getContext("2d");
+  function rnd(s) { return function () { s = (s * 16807) % 2147483647; return s / 2147483647; }; }
+  function draw() {
+    var w = c.width = c.offsetWidth, h = c.height = c.offsetHeight, r = rnd(7), n = Math.round(w * h / 9000), p = [], i, j;
+    var ink = getComputedStyle(document.documentElement).getPropertyValue("--ink").trim() || "#e9e6df";
+    for (i = 0; i < n; i++) p.push([r() * w, r() * h]);
+    x.clearRect(0, 0, w, h);
+    x.strokeStyle = x.fillStyle = ink;
+    for (i = 0; i < n; i++) for (j = i + 1; j < n; j++) {
+      var d = Math.hypot(p[i][0] - p[j][0], p[i][1] - p[j][1]);
+      if (d < 130) { x.globalAlpha = 0.22 * (1 - d / 130); x.beginPath(); x.moveTo(p[i][0], p[i][1]); x.lineTo(p[j][0], p[j][1]); x.stroke(); }
+    }
+    x.globalAlpha = 0.6;
+    for (i = 0; i < n; i++) x.fillRect(p[i][0] - 1, p[i][1] - 1, 2, 2);
+    x.globalAlpha = 1;
+  }
+  draw();
+  addEventListener("resize", draw);
+})();

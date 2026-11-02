@@ -26,7 +26,7 @@
 
 <header class="nav"><div class="wrap">
 	<a class="hud" href="#top" style="color:var(--ink)"><span class="a">[</span>ACK<span class="a">]</span></a>
-	<ul class="hud"><li><a href="#about">About</a></li><li><a href="#experience">Experience</a></li><li><a href="#projects">Projects</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li></ul>
+	<ul class="hud"><li><a href="#about">About</a></li><li><a href="#experience">Experience</a></li><li><a href="#projects">Projects</a></li><li><a href="#ask">Ask</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li></ul>
 </div></header>
 
 <main>
@@ -153,17 +153,26 @@ Loaded <b>7</b> rules. Auditing 3 files...
 <b>search</b>  bm25 + vectors  top 4
 [1] Hololight / Devices and platforms
 [2] Experience / Hololight
-<b>answer</b>  HoloLens 2, Meta Quest, ... [1][2]</div><div class="br dim"></div><span class="hud h1">07</span><span class="hud h2">16:10</span></div><div class="info"><h3>rag-demo</h3><p>Ask questions about my CV and projects. Hybrid keyword and vector search finds the passages, Claude answers with citations.</p><span class="hud">TypeScript · Cloudflare Workers · Claude</span><a class="more" href="https://ackeskin.github.io/rag-demo/" target="_blank" rel="noopener">Try it →</a> <a class="more" href="https://github.com/AcKeskin/rag-demo" target="_blank" rel="noopener">Source →</a></div></article>
+<b>answer</b>  HoloLens 2, Meta Quest, ... [1][2]</div><div class="br dim"></div><span class="hud h1">07</span><span class="hud h2">16:10</span></div><div class="info"><h3>rag-demo</h3><p>Ask questions about my CV and projects. Hybrid keyword and vector search finds the passages, Claude answers with citations.</p><span class="hud">TypeScript · Cloudflare Workers · Claude</span><span class="links2"><a class="more" href="#ask">Try it ↓</a><a class="more" href="https://github.com/AcKeskin/rag-demo" target="_blank" rel="noopener">Source →</a></span></div></article>
 		<article class="card"><div class="media"><div class="term" aria-hidden="true"><b>&gt;</b> What graphics work has he done?
 <b>01</b> list_repos()
 <b>02</b> get_readme(repo: "procedural-planets")
 <b>03</b> get_private_work_summary()
-<b>answer</b>  procedural-planets: GPU planets ...</div><div class="br dim"></div><span class="hud h1">08</span><span class="hud h2">16:10</span></div><div class="info"><h3>agent-demo</h3><p>An agent that answers questions about my work by calling read-only tools on my GitHub. Each answer shows the tool calls behind it.</p><span class="hud">TypeScript · Cloudflare Workers · Claude</span><a class="more" href="https://ackeskin.github.io/agent-demo/" target="_blank" rel="noopener">Try it →</a> <a class="more" href="https://github.com/AcKeskin/agent-demo" target="_blank" rel="noopener">Source →</a></div></article>
+<b>answer</b>  procedural-planets: GPU planets ...</div><div class="br dim"></div><span class="hud h1">08</span><span class="hud h2">16:10</span></div><div class="info"><h3>agent-demo</h3><p>An agent that answers questions about my work by calling read-only tools on my GitHub. Each answer shows the tool calls behind it.</p><span class="hud">TypeScript · Cloudflare Workers · Claude</span><span class="links2"><a class="more" href="#ask">Try it ↓</a><a class="more" href="https://github.com/AcKeskin/agent-demo" target="_blank" rel="noopener">Source →</a></span></div></article>
+	</div>
+</div></section>
+
+<section id="ask"><canvas class="plexus" aria-hidden="true"></canvas><div class="wrap">
+	<header class="sh"><span class="n">[04]</span><h2>Ask</h2><span class="ln"></span><span class="hud">2 live demos</span></header>
+	<p class="ask-lede">Two ways to ask about my work. One searches my CV and project notes, the other calls tools on my GitHub. Both run on Cloudflare Workers with Claude.</p>
+	<div class="ask">
+		<div class="ask-col" data-poi="Asset · rag-demo" data-k="b"><p class="hud ask-k"><span class="a">07</span> · rag-demo · Search and cite</p><div data-rag-demo data-endpoint="https://rag-demo.keskinac1998.workers.dev"></div></div>
+		<div class="ask-col" data-poi="Asset · agent-demo" data-k="b"><p class="hud ask-k"><span class="a">08</span> · agent-demo · Tools on GitHub</p><div data-agent-demo data-endpoint="https://agent-demo.keskinac1998.workers.dev"></div></div>
 	</div>
 </div></section>
 
 <section id="education"><div class="wrap">
-	<header class="sh"><span class="n">[04]</span><h2>Education</h2><span class="ln"></span></header>
+	<header class="sh"><span class="n">[05]</span><h2>Education</h2><span class="ln"></span></header>
 	<div class="edu">
 		<ul>
 			<li data-poi="Asset · TED University" data-k="b"><h3>TED University</h3><p>B.E. Computer Engineering, minor in Business Administration. 2017 – 2021, GPA 3.48. Graduation project: Virtuanance.</p></li>
@@ -177,7 +186,7 @@ Loaded <b>7</b> rules. Auditing 3 files...
 </div></section>
 
 <section id="contact"><div class="wrap">
-	<header class="sh"><span class="n">[05]</span><h2>Contact</h2><span class="ln"></span></header>
+	<header class="sh"><span class="n">[06]</span><h2>Contact</h2><span class="ln"></span></header>
 	<div class="ct">
 		<div class="br"></div>
 		<p class="pill">Awaiting contact...</p>
@@ -199,5 +208,7 @@ Loaded <b>7</b> rules. Auditing 3 files...
 
 </div>
 <script src="assets/js/site.js"></script>
+<script type="module" src="/rag-demo/widget.js"></script>
+<script type="module" src="/agent-demo/widget.js"></script>
 </body>
 </html>

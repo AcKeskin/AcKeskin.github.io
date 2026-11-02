@@ -255,3 +255,13 @@ html{scroll-behavior:smooth}
   .stats b{font-size:40px}
   .off{grid-template-columns:1fr}
 }
+
+/* Ask section */
+.ask-lede{color:var(--mute);max-width:65ch;margin:0 0 28px}
+.ask{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.ask-col{display:grid;gap:10px;min-width:0}
+.links2{display:flex;gap:20px;flex-wrap:wrap}
+@media (max-width:900px){.ask{grid-template-columns:1fr}}
+#ask{position:relative;overflow:hidden}
+#ask .wrap{position:relative}
+.plexus{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.5}
